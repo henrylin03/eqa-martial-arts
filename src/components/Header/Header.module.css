@@ -1,0 +1,37 @@
+.header {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  padding: 24px;
+  background-color: black;
+}
+
+.branding {
+  max-width: 172px;
+  height: auto;
+}
+
+.nav {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 12px;
+  color: white;
+}
+
+.sublinkLabel {
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.activeLink {
+  font-weight: 700;
+}
+
+.button {
+  justify-self: end;
+  margin-right: 2vmin;
+}
