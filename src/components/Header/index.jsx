@@ -1,5 +1,13 @@
 import { NavLink, Link } from "react-router-dom";
-import { Menu, Button } from "@mantine/core";
+import { useDisclosure, useMediaQuery } from "@mantine/hooks";
+import {
+  Menu,
+  Button,
+  Burger,
+  Drawer,
+  UnstyledButton,
+  Collapse,
+} from "@mantine/core";
 import { IconChevronDown } from "@tabler/icons-react";
 import brandingImage from "/images/branding/logo-black-bg.png";
 import styles from "./Header.module.css";
@@ -20,6 +28,11 @@ const PAGE_LINKS = [
 ];
 
 const Header = () => {
+  const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] =
+    useDisclosure(false);
+  const [linksOpened, { toggle: toggleLinks }] = useDisclosure(false);
+  const isNarrowScreen = useMediaQuery("(max-width: 739px)");
+
   const navLinks = PAGE_LINKS.map((linkObject) => {
     if (!linkObject.hasOwnProperty("sublinks"))
       return (
@@ -32,6 +45,38 @@ const Header = () => {
         >
           {linkObject.label}
         </NavLink>
+      );
+
+    if (isNarrowScreen)
+      return (
+        <>
+          <UnstyledButton onClick={toggleLinks} className={styles.sublinkLabel}>
+            <span>{linkObject.label}</span>
+            <IconChevronDown
+              size={16}
+              className={
+                linksOpened
+                  ? styles.chevronIconCollapseOpened
+                  : styles.chevronIcon
+              }
+            />
+          </UnstyledButton>
+
+          <Collapse in={linksOpened}>
+            <div className={styles.sublinksDrawer}>
+              {linkObject.sublinks.map((sublink) => (
+                <NavLink
+                  to={sublink.path}
+                  className={({ isActive }) =>
+                    isActive ? styles.activeLink : undefined
+                  }
+                >
+                  {sublink.label}
+                </NavLink>
+              ))}
+            </div>
+          </Collapse>
+        </>
       );
 
     return (
@@ -48,9 +93,9 @@ const Header = () => {
           </div>
         </Menu.Target>
 
-        <Menu.Dropdown>
+        <Menu.Dropdown className={styles.menuDropdown}>
           {linkObject.sublinks.map((sublink) => (
-            <Menu.Item key={sublink.label}>
+            <Menu.Item key={sublink.label} className={styles.menuDropdownLink}>
               <NavLink
                 to={sublink.path}
                 className={({ isActive }) =>
@@ -68,25 +113,73 @@ const Header = () => {
 
   return (
     <header className={styles.header}>
-      <Link to="/" aria-label="Return to home page">
-        <img
-          src={brandingImage}
+      <div className={styles.inner}>
+        <Link
+          to="/"
+          aria-label="Return to home page"
           className={styles.branding}
-          alt="Logo for Equinox Academy Martial Arts"
+        >
+          <img
+            src={brandingImage}
+            className={styles.brandingImage}
+            alt="Logo for Equinox Academy Martial Arts"
+          />
+        </Link>
+
+        <div className={styles.navContainerWide}>
+          <nav className={styles.nav}>{navLinks}</nav>
+        </div>
+
+        {isNarrowScreen ? (
+          <Button
+            variant="filled"
+            color="orange"
+            className={styles.button}
+            size="xs"
+            radius="xl"
+          >
+            Free trial
+          </Button>
+        ) : (
+          <Button
+            variant="filled"
+            color="orange"
+            className={styles.button}
+            size="md"
+            radius="xl"
+          >
+            Book a free trial
+          </Button>
+        )}
+
+        <Burger
+          opened={drawerOpened}
+          onClick={toggleDrawer}
+          color="white"
+          className={styles.burger}
         />
-      </Link>
 
-      <nav className={styles.nav}>{navLinks}</nav>
-
-      <Button
-        variant="filled"
-        color="orange"
-        className={styles.button}
-        size="md"
-        radius="xl"
-      >
-        Book a free trial
-      </Button>
+        <Drawer
+          opened={drawerOpened}
+          onClose={closeDrawer}
+          hiddenFrom="sm"
+          className={styles.drawer}
+          padding="lg"
+        >
+          <div className={styles.drawerInner}>
+            <nav className={styles.nav}>{navLinks}</nav>
+            <Button
+              variant="filled"
+              color="orange"
+              className={styles.button}
+              size="md"
+              radius="xl"
+            >
+              Book a free trial
+            </Button>
+          </div>
+        </Drawer>
+      </div>
     </header>
   );
 };
