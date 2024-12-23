@@ -1,0 +1,123 @@
+.header {
+  background-color: black;
+  position: sticky;
+  top: 0;
+  z-index: 199;
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+  padding: 12px 16px;
+  gap: 8px;
+}
+
+.brandingImage {
+  max-width: 172px;
+  height: auto;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.drawerInner {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  width: fit-content;
+}
+
+.navContainerWide > .nav {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.menuDropdown {
+  background-color: black !important;
+  border: none !important;
+}
+
+.menuDropdownLink {
+  color: white !important;
+}
+
+.menuDropdownLink:hover,
+.menuDropdownLink > *:hover {
+  color: black !important;
+}
+
+.sublinkLabel {
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.sublinksDrawer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-left: 12px;
+  margin-top: 12px;
+}
+
+.activeLink {
+  font-weight: 700;
+  text-decoration: underline 3px orange;
+  text-underline-offset: 8px;
+}
+
+.button {
+  justify-self: end;
+  margin-right: 2vmin;
+}
+
+.chevronIcon {
+  transition: all 0.2s ease-out;
+}
+
+.chevronIconCollapseOpened {
+  transition: all 0.2s ease-out;
+  transform: rotate(0.5turn);
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 899px) {
+  .inner {
+    padding: 12px;
+  }
+
+  .button {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 739px) {
+  .brandingImage {
+    margin-top: 12px;
+    max-width: 100px;
+  }
+
+  .inner {
+    place-items: center;
+    padding: 4px 16px;
+  }
+
+  .burger {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    justify-self: start;
+  }
+
+  .branding {
+    grid-column: 2 / 3;
+  }
+}
