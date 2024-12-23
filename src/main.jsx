@@ -9,8 +9,9 @@ import ClassesPage from "./pages/ClassesPage.jsx";
 import TimetablePage from "./pages/TimetablePage.jsx";
 import ContactPage from "./pages/ContactPage.jsx";
 import { theme } from "./theme";
-import "./styles/normalise.css";
 import "@mantine/core/styles.css";
+import "./styles/normalise.css";
+import "./styles/global.css";
 
 const router = createBrowserRouter([
   {
