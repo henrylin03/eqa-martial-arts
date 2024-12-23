@@ -49,7 +49,7 @@ const Header = () => {
 
     if (isNarrowScreen)
       return (
-        <>
+        <div key={linkObject.label} className={styles.sublinkNarrowWrapper}>
           <UnstyledButton onClick={toggleLinks} className={styles.sublinkLabel}>
             <span>{linkObject.label}</span>
             <IconChevronDown
@@ -66,6 +66,7 @@ const Header = () => {
             <div className={styles.sublinksDrawer}>
               {linkObject.sublinks.map((sublink) => (
                 <NavLink
+                  key={sublink.label}
                   to={sublink.path}
                   className={({ isActive }) =>
                     isActive ? styles.activeLink : undefined
@@ -76,7 +77,7 @@ const Header = () => {
               ))}
             </div>
           </Collapse>
-        </>
+        </div>
       );
 
     return (

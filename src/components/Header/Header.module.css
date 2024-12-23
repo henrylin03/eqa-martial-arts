@@ -60,10 +60,13 @@
   flex-direction: column;
   gap: 8px;
   margin-left: 12px;
+  margin-top: 12px;
 }
 
 .activeLink {
   font-weight: 700;
+  text-decoration: underline 3px orange;
+  text-underline-offset: 8px;
 }
 
 .button {
