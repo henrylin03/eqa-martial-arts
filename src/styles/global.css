@@ -3,3 +3,15 @@
 * {
   font-family: "Inter", sans-serif;
 }
+
+#root {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.brandingImage {
+  max-width: 172px;
+  height: auto;
+}

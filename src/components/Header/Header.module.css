@@ -15,8 +15,7 @@
 }
 
 .brandingImage {
-  max-width: 172px;
-  height: auto;
+  composes: brandingImage from global;
 }
 
 .nav {
