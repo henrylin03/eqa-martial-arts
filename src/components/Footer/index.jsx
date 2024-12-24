@@ -119,7 +119,9 @@ const Footer = () => {
       <section className={styles.bottom}>
         <div className={styles.inner}>
           <IconCopyright size={16} className={styles.copyrightIcon} />
-          <small>2025 Equinox Academy. All rights reserved.</small>
+          <small className={styles.copyrightText}>
+            2025 Equinox Academy. All rights reserved.
+          </small>
         </div>
       </section>
     </footer>

@@ -1,0 +1,294 @@
+.section {
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.sectionHeading {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.paragraphText {
+  color: var(--grey);
+  font-size: 0.88rem;
+  line-height: 1.6rem;
+}
+
+/* HERO SECTION */
+.textContainer {
+  text-align: center;
+  margin: 0 auto;
+  padding: 48px;
+  width: 1000px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.heroHeading {
+  font-size: 3rem;
+  line-height: 4.7rem;
+}
+
+.subtextContainer {
+  composes: paragraphText;
+  font-size: 1rem;
+  line-height: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.heroImage {
+  max-width: 100%;
+}
+
+.underlinedText {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 8px;
+  z-index: 2;
+}
+
+.underlinedText:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0.6rem;
+  background: linear-gradient(120deg, orange 0%, var(--orange) 100%);
+  transform: translateY(-12px);
+  z-index: -1;
+  border-radius: 12px;
+
+  /* animation */
+  animation-name: underline;
+  animation-duration: 0.75s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+.carouselContainer {
+  max-width: 100dvw;
+}
+
+.carouselImage {
+  width: 100%;
+  height: 48vh;
+  object-fit: cover;
+  object-position: top;
+}
+
+/* CLASSES SECTION */
+.classes {
+  composes: section;
+}
+
+.classesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 36px;
+  width: 1000px;
+  max-width: 100%;
+}
+
+.card {
+  background-color: white;
+  box-shadow: 8px 8px 0px 4px var(--orange);
+  padding: 36px;
+  border-radius: 8px;
+  --border: 2px var(--orange) solid;
+  border-left: var(--border);
+  border-top: var(--border);
+  transition: transform 0.25s ease-out;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.cardHeading {
+  margin-top: 4px;
+  font-size: 1.1rem;
+}
+
+.cardImage {
+  max-width: 100px;
+  height: auto;
+}
+
+.classDescription {
+  composes: paragraphText;
+  flex: 1;
+  text-align: center;
+}
+
+/* WHY CHOOSE US SECTION */
+.whyChooseUs {
+  composes: section;
+  width: 1600px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding-bottom: 144px;
+}
+
+.reasonsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  justify-items: center;
+  gap: 48px;
+}
+
+.reasonsImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 70%;
+  border-radius: 8px;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.reason {
+  display: grid;
+  grid-template-columns: 1fr 10fr;
+  gap: 16px;
+}
+
+.reasonIcon {
+  width: 60px;
+  height: 60px;
+  padding: 16px;
+  color: var(--orange);
+  background-color: hsla(39, 100%, 50%, 20%);
+  border-radius: 100%;
+  place-self: center;
+}
+
+.reasonText {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* WHY CHOOSE US SECTION */
+.whyChooseUs {
+  composes: section;
+}
+
+/* ANIMATIONS */
+@keyframes underline {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 879px) {
+  .section {
+    padding: 52px 24px;
+  }
+
+  .right {
+    gap: 32px;
+  }
+
+  .whyChooseUs {
+    padding-bottom: 144px;
+  }
+}
+
+@media (max-width: 759px) {
+  .reasonsGrid {
+    gap: 36px;
+  }
+}
+
+@media (max-width: 684px) {
+  .reasonsImage {
+    display: none;
+  }
+
+  .reasonsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .sectionHeading {
+    margin-bottom: 16px;
+  }
+}
+
+@media (min-width: 607px) {
+  .carouselImage {
+    height: 60vh;
+  }
+}
+
+@media (max-width: 499px) {
+  .paragraphText {
+    font-size: 0.8rem;
+    line-height: 1.4rem;
+  }
+
+  .sectionHeading {
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+  }
+
+  .textContainer {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .heroHeading {
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+  }
+
+  .subtextContainer {
+    font-size: 0.9rem;
+    line-height: 1.7rem;
+  }
+
+  .classes {
+    padding: 48px 24px;
+    gap: 12px;
+  }
+
+  .reasonTitle {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 359px) {
+  .carouselImage {
+    height: 40dvh;
+  }
+
+  .reasonIcon {
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+  }
+}

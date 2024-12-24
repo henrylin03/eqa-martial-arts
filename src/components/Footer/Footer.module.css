@@ -8,7 +8,7 @@
 /* top section */
 .top {
   background-color: black;
-  padding: 32px 24px;
+  padding: 60px 24px;
   width: 100%;
   display: grid;
   justify-items: center;
@@ -74,10 +74,18 @@
   margin-bottom: 2px;
 }
 
+.copyrightText {
+  font-size: 0.75rem;
+}
+
 /* MEDIA QUERIES */
 @media (max-width: 859px) {
   .footer {
     font-size: 0.75rem;
+  }
+
+  .copyrightText {
+    font-size: inherit;
   }
 
   .heading {
@@ -88,7 +96,7 @@
 
 @media (max-width: 819px) {
   .top {
-    padding: 16px 12px;
+    padding: 24px 12px;
     grid-template-columns: 1fr repeat(2, 5fr);
     grid-template-rows: repeat(2, 1fr);
     justify-items: start;
@@ -108,7 +116,7 @@
 
   .top {
     grid-template-columns: repeat(auto-fit, minmax(172px, 1fr));
-    padding: 24px;
+    padding: 48px 24px;
     gap: 24px;
   }
 
