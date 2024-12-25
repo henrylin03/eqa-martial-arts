@@ -139,7 +139,7 @@
 /* WHY CHOOSE US SECTION */
 .whyChooseUs {
   composes: section;
-  width: 1600px;
+  width: 1200px;
   max-width: 100%;
   margin: 0 auto;
   padding-bottom: 144px;
@@ -147,7 +147,7 @@
 
 .reasonsGrid {
   display: grid;
-  grid-template-columns: 1fr 2.5fr;
+  grid-template-columns: 1fr 1.5fr;
   justify-items: center;
   gap: 48px;
 }
@@ -219,19 +219,19 @@
   }
 }
 
-@media (max-width: 829px) {
+@media (max-width: 759px) {
+  .reasonsGrid {
+    gap: 36px;
+  }
+}
+
+@media (max-width: 745px) {
   .reasonsImage {
     display: none;
   }
 
   .reasonsGrid {
     grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 759px) {
-  .reasonsGrid {
-    gap: 36px;
   }
 }
 
