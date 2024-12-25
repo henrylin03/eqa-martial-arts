@@ -38,7 +38,7 @@
   gap: 12px;
 }
 
-.locationValue {
+.contactValue {
   white-space: pre-wrap;
   word-wrap: break-word;
 }
@@ -50,12 +50,26 @@
 }
 
 .socialsIcon {
-  width: 32px;
-  height: auto;
+  width: 42px;
+  height: 42px;
+  padding: 4px;
+  border-radius: 50%;
+  background-color: transparent;
+  transform: translateX(-4px);
+  transition: background-color 0.1s ease-in;
+}
+
+.socialsIcon:hover {
+  background-color: var(--orange);
 }
 
 .socialsIcon > * {
   color: white;
+}
+
+.link:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 /* bottom section */

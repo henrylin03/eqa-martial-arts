@@ -85,6 +85,11 @@
   margin-top: 12px;
 }
 
+.link:hover {
+  text-decoration: underline 3px orange;
+  text-underline-offset: 8px;
+}
+
 .activeLink {
   font-weight: 700;
   text-decoration: underline 3px orange;

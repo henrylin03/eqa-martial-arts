@@ -16,7 +16,7 @@ const Nav = ({ isNarrowScreen }) => {
           key={linkObject.label}
           to={linkObject.path}
           className={({ isActive }) =>
-            isActive ? styles.activeLink : undefined
+            isActive ? styles.activeLink : styles.link
           }
         >
           {linkObject.label}
@@ -45,7 +45,7 @@ const Nav = ({ isNarrowScreen }) => {
                   key={sublink.label}
                   to={sublink.path}
                   className={({ isActive }) =>
-                    isActive ? styles.activeLink : undefined
+                    isActive ? styles.activeLink : styles.link
                   }
                 >
                   {sublink.label}

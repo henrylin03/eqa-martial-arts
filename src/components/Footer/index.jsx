@@ -65,7 +65,17 @@ const Footer = () => {
           key={item.label}
         >
           <figure className={styles.icon}>{item.icon}</figure>
-          <p className={styles.locationValue}>{item.value}</p>
+          {item.label === "Email" ? (
+            <a
+              href={`mailto:${item.value}`}
+              aria-label="Send email"
+              className={styles.link}
+            >
+              {item.value}
+            </a>
+          ) : (
+            <p className={styles.contactValue}>{item.value}</p>
+          )}
         </div>
       ));
     else if (column.heading === "Follow us")
@@ -85,6 +95,7 @@ const Footer = () => {
           to={link.path}
           aria-label={`Go to ${link.label} page`}
           key={link.label}
+          className={styles.link}
         >
           {link.label}
         </Link>
