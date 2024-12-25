@@ -147,13 +147,13 @@
 
 .reasonsGrid {
   display: grid;
-  grid-template-columns: 1fr 1.5fr;
+  grid-template-columns: 1fr 2.5fr;
   justify-items: center;
   gap: 48px;
 }
 
 .reasonsImage {
-  width: 100%;
+  max-width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: 70%;
@@ -219,13 +219,7 @@
   }
 }
 
-@media (max-width: 759px) {
-  .reasonsGrid {
-    gap: 36px;
-  }
-}
-
-@media (max-width: 684px) {
+@media (max-width: 829px) {
   .reasonsImage {
     display: none;
   }
@@ -233,7 +227,15 @@
   .reasonsGrid {
     grid-template-columns: 1fr;
   }
+}
 
+@media (max-width: 759px) {
+  .reasonsGrid {
+    gap: 36px;
+  }
+}
+
+@media (max-width: 684px) {
   .sectionHeading {
     margin-bottom: 16px;
   }
