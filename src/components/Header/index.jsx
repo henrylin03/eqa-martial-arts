@@ -1,29 +1,45 @@
 import { Link } from "react-router-dom";
-import { useDisclosure, useMediaQuery } from "@mantine/hooks";
+import { useDisclosure, useMediaQuery, useWindowScroll } from "@mantine/hooks";
 import { Burger, Drawer } from "@mantine/core";
 import Nav from "./Nav";
 import CallToActionButton from "../CallToActionButton";
 import brandingImage from "/images/branding/logo-black-bg.png";
+import brandingImageShrunk from "/images/branding/logo-black-bg-cropped.png";
 import styles from "./Header.module.css";
 
 const Header = () => {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] =
     useDisclosure(false);
   const isNarrowScreen = useMediaQuery("(max-width: 739px)");
+  const [scrollPosition, _] = useWindowScroll();
+
+  const isScrolledDown = scrollPosition.y >= 200;
 
   return (
-    <header className={styles.header}>
+    <header
+      className={
+        isScrolledDown && !isNarrowScreen ? styles.headerShrunk : styles.header
+      }
+    >
       <div className={styles.inner}>
         <Link
           to="/"
           aria-label="Return to home page"
           className={styles.branding}
         >
-          <img
-            src={brandingImage}
-            className={styles.brandingImage}
-            alt="Logo for Equinox Academy Martial Arts"
-          />
+          {isScrolledDown && !isNarrowScreen ? (
+            <img
+              src={brandingImageShrunk}
+              className={styles.brandingImageShrunk}
+              alt="Logo"
+            />
+          ) : (
+            <img
+              src={brandingImage}
+              className={styles.brandingImage}
+              alt="Logo"
+            />
+          )}
         </Link>
 
         {isNarrowScreen ? (

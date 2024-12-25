@@ -1,7 +1,7 @@
 import { Button } from "@mantine/core";
 import PropTypes from "prop-types";
 
-const CallToActionButton = ({ className, isNarrowScreen=false }) => (
+const CallToActionButton = ({ className, isNarrowScreen = false }) => (
   <Button
     variant="filled"
     color="orange"
@@ -9,7 +9,7 @@ const CallToActionButton = ({ className, isNarrowScreen=false }) => (
     className={className}
     size={isNarrowScreen ? "xs" : "md"}
   >
-    {isNarrowScreen ? "Free Trial" : "Book a free trial"}
+    {isNarrowScreen ? "Free trial" : "Book a free trial"}
   </Button>
 );
 

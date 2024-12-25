@@ -1,8 +1,20 @@
 .header {
   background-color: black;
-  position: sticky;
+  position: fixed;
   top: 0;
+  width: 100%;
   z-index: 199;
+  padding: 12px 16px;
+
+  --transition-time: 0.5s;
+  transition: opacity var(--transition-time);
+}
+
+.headerShrunk {
+  composes: header;
+  opacity: 0.9;
+  padding: 16px;
+  transition: opacity var(--transition-time);
 }
 
 .inner {
@@ -10,12 +22,17 @@
   grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: 1fr;
   align-items: center;
-  padding: 12px 16px;
   gap: 8px;
 }
 
 .brandingImage {
   composes: brandingImage from global;
+}
+
+.brandingImageShrunk {
+  margin-top: 8px;
+  margin-left: 12px;
+  width: 80px;
 }
 
 .nav {
@@ -100,11 +117,6 @@
 }
 
 @media (max-width: 739px) {
-  .brandingImage {
-    margin-top: 12px;
-    max-width: 100px;
-  }
-
   .inner {
     place-items: center;
     padding: 4px 16px;
@@ -118,5 +130,11 @@
 
   .branding {
     grid-column: 2 / 3;
+  }
+}
+
+@media (max-width: 499px) {
+  .inner {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
