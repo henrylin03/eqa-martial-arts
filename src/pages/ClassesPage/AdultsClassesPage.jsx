@@ -37,7 +37,7 @@ const AdultsClassesPage = () => {
             <Image
               radius="lg"
               src="/images/james-omoplata.jpg"
-              className={styles.adultsBjjImage}
+              className={styles.gridImageRight}
             />
             <div className={styles.textContainer}>
               <h2 className={styles.sectionHeading}>
@@ -121,8 +121,8 @@ const AdultsClassesPage = () => {
             </div>
             <Image
               radius="lg"
-              src="/images/jonathan-tomas-rX36vcriciQ-unsplash.jpg"
-              className={styles.gridImage}
+              src="/images/mt-darien.jpg"
+              className={styles.gridImageFarRight}
             />
           </div>
         </article>
@@ -132,7 +132,7 @@ const AdultsClassesPage = () => {
             <Image
               radius="lg"
               src="/images/adults-mma.jpg"
-              className={styles.mmaImage}
+              className={styles.gridImageFarRight}
             />
             <div className={styles.textContainer}>
               <h2 className={styles.sectionHeading}>

@@ -17,6 +17,7 @@
 
 .pageTitle {
   font-size: 2.5rem;
+  text-align: center;
 }
 
 .buttonGroup {
@@ -49,19 +50,19 @@
   object-position: 50% 10%;
 }
 
+.gridImageFarRight {
+  composes: gridImage;
+  object-position: right;
+}
+
 .gridImageCentred {
   composes: gridImage;
   object-position: 50% 30%;
 }
 
-.adultsBjjImage {
+.gridImageRight {
   composes: gridImage;
   object-position: 60% 50%;
-}
-
-.mmaImage {
-  composes: gridImage;
-  object-position: right;
 }
 
 .textContainer {
@@ -137,5 +138,19 @@
 
   .gridImageCentred {
     object-position: 50% 35%;
+  }
+
+  .gridImageFarRight {
+    object-position: right;
+  }
+}
+
+@media (max-width: 499px) {
+  .pageTitle {
+    font-size: 2rem;
+  }
+
+  .sectionHeading {
+    font-size: 1.5rem;
   }
 }
