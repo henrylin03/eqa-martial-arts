@@ -113,18 +113,12 @@
 /* MEDIA QUERIES */
 @media (max-width: 899px) {
   .inner {
-    padding: 12px;
+    place-items: center;
+    padding: 4px 16px;
   }
 
   .button {
     margin-right: 0;
-  }
-}
-
-@media (max-width: 739px) {
-  .inner {
-    place-items: center;
-    padding: 4px 16px;
   }
 
   .burger {

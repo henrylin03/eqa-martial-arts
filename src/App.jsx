@@ -7,7 +7,7 @@ const App = () => (
     <Header />
 
     <main>
-      <Outlet context={[]} />
+      <Outlet />
     </main>
 
     <Footer />

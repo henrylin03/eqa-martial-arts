@@ -12,12 +12,14 @@
 }
 
 .paragraphText {
-  color: var(--grey);
-  font-size: 0.88rem;
-  line-height: 1.6rem;
+  composes: paragraphText from global;
 }
 
 /* HERO SECTION */
+.hero {
+  padding-top: 120px;
+}
+
 .textContainer {
   text-align: center;
   margin: 0 auto;
@@ -247,10 +249,15 @@
   }
 }
 
+@media (max-width: 599px) {
+  .hero {
+    padding-top: 96px;
+  }
+}
+
 @media (max-width: 499px) {
-  .paragraphText {
-    font-size: 0.8rem;
-    line-height: 1.4rem;
+  .hero {
+    padding-top: 76px;
   }
 
   .sectionHeading {

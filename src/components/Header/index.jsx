@@ -10,7 +10,7 @@ import styles from "./Header.module.css";
 const Header = () => {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] =
     useDisclosure(false);
-  const isNarrowScreen = useMediaQuery("(max-width: 739px)");
+  const isNarrowScreen = useMediaQuery("(max-width: 899px)");
   const [scrollPosition, _] = useWindowScroll();
 
   const isScrolledDown = scrollPosition.y >= 200;
