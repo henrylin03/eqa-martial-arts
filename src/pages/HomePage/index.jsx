@@ -12,6 +12,7 @@ import CLASSES_DATA from "./CLASSES_DATA";
 import bannerImage from "/images/banner/banner.jpg";
 import reasonsImage from "/images/spider-guard.jpg";
 import styles from "./HomePage.module.css";
+import CallToActionSection from "../../components/CallToActionSection";
 
 const HomePage = () => {
   const isNarrowScreen = useMediaQuery("(max-width: 869px)");
@@ -138,6 +139,8 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+
+      <CallToActionSection isWhiteBg={true} />
     </>
   );
 };

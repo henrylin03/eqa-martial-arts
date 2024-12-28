@@ -1,7 +1,5 @@
 .inner {
-  max-width: 1400px;
-  padding: 84px 48px;
-  margin: 0 auto;
+  composes: inner from global;
 }
 
 /* ABOVE THE FOLD SECTION */
@@ -114,46 +112,6 @@
   gap: 4px;
 }
 
-/* CALL TO ACTION SECTION */
-.ctaSection {
-  position: relative;
-  background-color: var(--lightest-orange);
-  z-index: 9;
-  overflow: hidden;
-}
-
-.ctaSection::after {
-  content: "";
-  border-top-left-radius: 50% 100%;
-  border-top-right-radius: 50% 100%;
-  position: absolute;
-  bottom: 0;
-  height: 85%;
-  width: 100%;
-  z-index: -1;
-  background-color: var(--orange);
-  transform: scale(1.3);
-}
-
-.ctaSectionWhiteBg {
-  composes: ctaSection;
-  background-color: white;
-}
-
-.ctaInner {
-  composes: inner;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  z-index: 9;
-}
-
-.ctaText {
-  font-size: 0.75rem;
-  color: hsla(0, 0%, 100%, 70%);
-}
-
 /* MEDIA QUERIES */
 @media (max-width: 1019px) {
   .classType > .inner {
@@ -166,12 +124,6 @@
 }
 
 /* tablet */
-@media (max-width: 799px) {
-  .inner {
-    padding: 60px 24px;
-  }
-}
-
 @media (max-width: 749px) {
   .classType > .inner {
     grid-template-columns: 1fr;
@@ -185,12 +137,5 @@
 
   .gridImageCentred {
     object-position: 50% 35%;
-  }
-}
-
-/* mobile */
-@media (max-width: 499px) {
-  .inner {
-    padding: 48px 20px;
   }
 }

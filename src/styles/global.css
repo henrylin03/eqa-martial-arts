@@ -33,6 +33,12 @@ li {
   list-style-type: none;
 }
 
+.inner {
+  max-width: 1400px;
+  padding: 84px 48px;
+  margin: 0 auto;
+}
+
 .paragraphText {
   color: var(--grey);
   font-size: 0.88rem;
@@ -61,8 +67,18 @@ li {
   }
 }
 
+@media (max-width: 799px) {
+  .inner {
+    padding: 60px 24px;
+  }
+}
+
 /* mobile screens */
 @media (max-width: 499px) {
+  .inner {
+    padding: 48px 20px;
+  }
+
   .brandingImage {
     max-width: 88px;
   }

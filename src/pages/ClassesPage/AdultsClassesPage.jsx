@@ -1,12 +1,10 @@
 import { Link } from "react-router-dom";
 import { Badge, Button, Image } from "@mantine/core";
-import { useMediaQuery } from "@mantine/hooks";
+import CallToActionSection from "../../components/CallToActionSection";
 import TickIcon from "./TickIcon";
 import styles from "./Classes.module.css";
 
 const AdultsClassesPage = () => {
-  const isNarrowScreen = useMediaQuery("(max-width: 749px)");
-
   return (
     <>
       <section className={styles.aboveTheFold}>
@@ -179,19 +177,7 @@ const AdultsClassesPage = () => {
         </article>
       </section>
 
-      <section className={styles.ctaSectionWhiteBg}>
-        <div className={styles.ctaInner}>
-          <p className={styles.ctaText}>Ready to try a class?</p>
-          <Button
-            color="orange"
-            variant="white"
-            radius="xl"
-            size={isNarrowScreen ? "sm" : "lg"}
-          >
-            Book a free trial
-          </Button>
-        </div>
-      </section>
+      <CallToActionSection isWhiteBg={true} />
     </>
   );
 };
