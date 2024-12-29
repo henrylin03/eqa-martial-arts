@@ -15,8 +15,10 @@
     "**/*": "prettier --write --ignore-unknown"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@mantine/carousel": "^7.15.2",
     "@mantine/core": "^7.15.1",
+    "@mantine/form": "^7.15.2",
     "@mantine/hooks": "^7.15.1",
     "@tabler/icons-react": "^3.26.0",
     "embla-carousel-autoplay": "^7.1.0",

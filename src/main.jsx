@@ -11,7 +11,7 @@ import ErrorPage from "./pages/ErrorPage.jsx";
 import KidsClassesPage from "./pages/ClassesPage/KidsClassesPage";
 import AdultsClassesPage from "./pages/ClassesPage/AdultsClassesPage";
 import TimetablePage from "./pages/TimetablePage.jsx";
-import ContactPage from "./pages/ContactPage.jsx";
+import ContactPage from "./pages/ContactPage";
 
 /* css */
 import "@mantine/core/styles.css";

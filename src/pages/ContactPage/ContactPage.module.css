@@ -1,0 +1,141 @@
+.contactPage {
+  min-height: 100dvh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  background-color: var(--lightest-orange);
+}
+
+.textAndFormContainer {
+  padding: 172px 24px 48px 24px;
+  margin: 0 auto;
+  width: 760px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.paragraphText {
+  composes: paragraphText from global;
+}
+
+.contactMethods {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 48px;
+}
+
+.contactMethod {
+  display: flex;
+  align-items: center;
+  gap: 1.5vmin;
+}
+
+.contactIcon {
+  width: 36px;
+  height: 36px;
+  padding: 0.4rem;
+  color: var(--orange);
+  background-color: hsla(39, 100%, 50%, 20%);
+  border-radius: 100%;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.contactIcon > svg {
+  height: 100%;
+  width: 100%;
+}
+
+.contactValue {
+  flex-shrink: 0;
+  composes: paragraphText;
+  text-wrap: none;
+}
+
+.link {
+  composes: paragraphText from global;
+  composes: link from global;
+}
+
+.mapScreenshot {
+  height: 100%;
+  min-height: 100dvh;
+  max-width: 100%;
+  padding-top: 12dvh;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 1024px) {
+  .textAndFormContainer {
+    width: 100%;
+    padding: 180px 0 48px 24px;
+    gap: 3vmin;
+  }
+
+  .contactMethods {
+    gap: 1vmin 4vmin;
+  }
+
+  .contactMethod {
+    gap: 1vmin;
+  }
+
+  .contactIcon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .link,
+  .contactValue {
+    font-size: 0.75rem !important;
+  }
+}
+
+/* collapses into single column grid */
+@media (max-width: 753px) {
+  .contactPage {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .map {
+    grid-row: 1 / 2;
+  }
+
+  .mapScreenshot {
+    padding-top: 96px;
+    min-height: 0;
+    height: 75dvh;
+    width: 100%;
+    object-position: 33% 33%;
+  }
+
+  .textAndFormContainer {
+    padding: 24px 48px 48px 48px;
+  }
+}
+
+@media (max-width: 515px) {
+  .textAndFormContainer {
+    padding: 24px 20px 48px 20px;
+  }
+
+  .contactMethods {
+    gap: 2vmin 4vmin;
+  }
+
+  .contactMethod {
+    gap: 2vmin;
+  }
+}
+
+@media (max-width: 379px) {
+  .textAndFormContainer {
+    padding: 24px 12px 48px 12px;
+  }
+}

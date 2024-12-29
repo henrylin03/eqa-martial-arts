@@ -33,13 +33,20 @@ li {
   list-style-type: none;
 }
 
+.link:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
 .inner {
   max-width: 1400px;
   padding: 84px 48px;
   margin: 0 auto;
 }
 
-.paragraphText {
+.paragraphText,
+.mantine-TextInput-label,
+.mantine-Textarea-label {
   color: var(--grey);
   font-size: 0.88rem;
   line-height: 1.6rem;
@@ -49,6 +56,23 @@ li {
 .brandingImage {
   max-width: 172px;
   height: auto;
+}
+
+/* Mantine components */
+.mantine-TextInput-input,
+.mantine-Textarea-input {
+  font-family: inherit;
+  &:focus {
+    border: 2px solid orange;
+  }
+}
+
+.mantine-TextInput-input {
+  padding: 20px 12px !important;
+}
+
+.mantine-Textarea-input {
+  padding: 12px !important;
 }
 
 /* MEDIA QUERIES */
@@ -61,7 +85,11 @@ li {
 
 /* tablet screens */
 @media (max-width: 759px) {
-  .paragraphText {
+  .paragraphText,
+  .mantine-TextInput-input,
+  .mantine-Textarea-input,
+  .mantine-TextInput-label,
+  .mantine-Textarea-label {
     font-size: 0.8rem;
     line-height: 1.45rem;
   }
@@ -83,7 +111,11 @@ li {
     max-width: 88px;
   }
 
-  .paragraphText {
+  .paragraphText,
+  .mantine-TextInput-input,
+  .mantine-Textarea-input,
+  .mantine-TextInput-label,
+  .mantine-Textarea-label {
     font-size: 0.8rem;
     line-height: 1.4rem;
   }
