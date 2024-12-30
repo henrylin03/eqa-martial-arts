@@ -16,6 +16,12 @@
 }
 
 /* HERO SECTION */
+.hero {
+  background-color: var(--lightest-orange);
+  display: flex;
+  flex-direction: column;
+}
+
 .textContainer {
   text-align: center;
   margin: 0 auto;
