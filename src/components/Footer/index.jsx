@@ -5,7 +5,7 @@ import {
   IconMail,
   IconBrandInstagram,
 } from "@tabler/icons-react";
-import brandingImage from "/images/branding/logo-black-bg.png";
+import brandingImage from "/images/branding/logo-white-bg.jpg";
 import styles from "./Footer.module.css";
 
 const FOOTER_LINKS = [

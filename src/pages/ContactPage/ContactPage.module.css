@@ -7,7 +7,7 @@
 }
 
 .textAndFormContainer {
-  padding: 172px 24px 48px 24px;
+  padding: 60px 48px;
   margin: 0 auto;
   width: 760px;
   max-width: 100%;
@@ -64,16 +64,15 @@
   height: 100%;
   min-height: 100dvh;
   max-width: 100%;
-  padding-top: 12dvh;
   object-fit: cover;
   object-position: center;
 }
 
 /* MEDIA QUERIES */
-@media (max-width: 1024px) {
+@media (max-width: 1169px) {
   .textAndFormContainer {
     width: 100%;
-    padding: 180px 0 48px 24px;
+    padding: 48px 24px;
     gap: 3vmin;
   }
 
@@ -108,9 +107,8 @@
   }
 
   .mapScreenshot {
-    padding-top: 96px;
     min-height: 0;
-    height: 75dvh;
+    height: 40dvh;
     width: 100%;
     object-position: 33% 33%;
   }

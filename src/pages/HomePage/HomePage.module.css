@@ -16,15 +16,11 @@
 }
 
 /* HERO SECTION */
-.hero {
-  padding-top: 120px;
-}
-
 .textContainer {
   text-align: center;
   margin: 0 auto;
   padding: 48px;
-  width: 1000px;
+  width: 960px;
   max-width: 100%;
   display: flex;
   flex-direction: column;
@@ -73,8 +69,8 @@
 
   /* animation */
   animation-name: underline;
-  animation-duration: 0.75s;
-  animation-delay: 1s;
+  animation-duration: 0.7s;
+  animation-delay: 0.2s;
   animation-fill-mode: forwards;
 }
 
@@ -140,10 +136,14 @@
 
 /* WHY CHOOSE US SECTION */
 .whyChooseUs {
+  background-color: var(--lightest-orange);
+}
+
+.whyChooseUsInner {
   composes: section;
+  margin-top: -48px;
   width: 1200px;
   max-width: 100%;
-  margin: 0 auto;
 }
 
 .reasonsGrid {
@@ -248,17 +248,7 @@
   }
 }
 
-@media (max-width: 599px) {
-  .hero {
-    padding-top: 96px;
-  }
-}
-
 @media (max-width: 499px) {
-  .hero {
-    padding-top: 76px;
-  }
-
   .sectionHeading {
     font-size: 1.5rem;
     line-height: 2.2rem;

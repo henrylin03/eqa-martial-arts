@@ -62,9 +62,7 @@ li {
 
 /* Mantine components */
 .mantine-Menu-item {
-  color: white;
   &:hover {
-    color: black !important;
     background-color: var(--lightest-orange);
   }
 }

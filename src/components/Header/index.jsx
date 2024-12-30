@@ -3,8 +3,8 @@ import { useDisclosure, useMediaQuery, useWindowScroll } from "@mantine/hooks";
 import { Burger, Drawer } from "@mantine/core";
 import Nav from "./Nav";
 import CallToActionButton from "../CallToActionButton";
-import brandingImage from "/images/branding/logo-black-bg.png";
-import brandingImageShrunk from "/images/branding/logo-black-bg-cropped.png";
+import brandingImage from "/images/branding/logo-white-bg.jpg";
+import brandingImageShrunk from "/images/branding/logo-white-bg-cropped.jpg";
 import styles from "./Header.module.css";
 
 const Header = () => {
@@ -47,13 +47,11 @@ const Header = () => {
             <Burger
               opened={drawerOpened}
               onClick={toggleDrawer}
-              color="white"
               className={styles.burger}
             />
             <Drawer
               opened={drawerOpened}
               onClose={closeDrawer}
-              hiddenFrom="sm"
               className={styles.drawer}
               padding="lg"
             >

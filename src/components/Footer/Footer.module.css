@@ -1,13 +1,12 @@
 .footer {
   --darkgrey: hsl(0, 0%, 70%);
-  color: var(--darkgrey);
+  color: var(--grey);
   font-size: 0.8rem;
   letter-spacing: 0.02rem;
 }
 
 /* top section */
 .top {
-  background-color: black;
   padding: 60px 24px;
   width: 100%;
   display: grid;
@@ -46,7 +45,7 @@
 .icon {
   width: 24px;
   height: auto;
-  color: hsl(0, 0%, 85%);
+  color: gray;
 }
 
 .socialsIcon {
@@ -56,14 +55,12 @@
   border-radius: 50%;
   background-color: transparent;
   transform: translateX(-4px);
-  transition: background-color 0.1s ease-in;
+  color: grey;
+  transition: background-color 0.2s linear;
 }
 
 .socialsIcon:hover {
   background-color: var(--orange);
-}
-
-.socialsIcon > * {
   color: white;
 }
 
@@ -73,7 +70,7 @@
 
 /* bottom section */
 .bottom {
-  background-color: hsl(0, 0%, 10%);
+  background-color: hsl(0, 0%, 90%);
   padding: 8px 24px;
 }
 

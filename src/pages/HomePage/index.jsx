@@ -111,36 +111,37 @@ const HomePage = () => {
       </section>
 
       <section className={styles.whyChooseUs}>
-        <Badge variant="outline" color="orange">
-          Why choose us
-        </Badge>
-        <h1 className={styles.sectionHeading}>Why train at Equinox?</h1>
-
-        <div className={styles.reasonsGrid}>
-          <img
-            src={reasonsImage}
-            alt="Brazilian Jiujitsu in the traditional gi"
-            className={styles.reasonsImage}
-          />
-          <div className={styles.right}>
-            {reasonsToChoose.map((reasonObject) => (
-              <div className={styles.reason} key={reasonObject.label}>
-                <figure className={styles.reasonIcon}>
-                  {reasonObject.icon}
-                </figure>
-                <div className={styles.reasonText}>
-                  <h3 className={styles.reasonTitle}>{reasonObject.label}</h3>
-                  <p className={styles.paragraphText}>
-                    {reasonObject.description}
-                  </p>
+        <div className={styles.whyChooseUsInner}>
+          <Badge variant="outline" color="orange">
+            Why choose us
+          </Badge>
+          <h1 className={styles.sectionHeading}>Why train at Equinox?</h1>
+          <div className={styles.reasonsGrid}>
+            <img
+              src={reasonsImage}
+              alt="Brazilian Jiujitsu in the traditional gi"
+              className={styles.reasonsImage}
+            />
+            <div className={styles.right}>
+              {reasonsToChoose.map((reasonObject) => (
+                <div className={styles.reason} key={reasonObject.label}>
+                  <figure className={styles.reasonIcon}>
+                    {reasonObject.icon}
+                  </figure>
+                  <div className={styles.reasonText}>
+                    <h3 className={styles.reasonTitle}>{reasonObject.label}</h3>
+                    <p className={styles.paragraphText}>
+                      {reasonObject.description}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      <CallToActionSection isWhiteBg={true} />
+      <CallToActionSection isWhiteBg={false} />
     </>
   );
 };
