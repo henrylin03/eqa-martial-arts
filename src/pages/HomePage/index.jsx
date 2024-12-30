@@ -51,12 +51,6 @@ const HomePage = () => {
 
       <h2 className={styles.cardHeading}>{classObject.label}</h2>
 
-      <Badge variant="white" color="grey" style={{ opacity: 0.65 }}>
-        {classObject.hasOwnProperty("ageRange")
-          ? `Ages ${classObject.ageRange}`
-          : classObject.restrictions}
-      </Badge>
-
       <p className={styles.classDescription}>{classObject.description}</p>
 
       <Link

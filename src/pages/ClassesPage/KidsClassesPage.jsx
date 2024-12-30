@@ -9,9 +9,6 @@ const KidsClassesPage = () => {
     <>
       <section className={styles.aboveTheFold}>
         <div className={styles.inner}>
-          <Badge variant="outline" color="orange">
-            Ages 3-14
-          </Badge>
           <h1 className={styles.pageTitle}>Kids classes</h1>
           <div className={styles.buttonGroup}>
             <Button color="orange" radius="xl">

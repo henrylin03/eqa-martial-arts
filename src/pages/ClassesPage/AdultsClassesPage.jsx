@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Badge, Button, Image } from "@mantine/core";
+import { Button, Image } from "@mantine/core";
 import CallToActionSection from "../../components/CallToActionSection";
 import TickIcon from "./TickIcon";
 import styles from "./Classes.module.css";
@@ -9,9 +9,6 @@ const AdultsClassesPage = () => {
     <>
       <section className={styles.aboveTheFold}>
         <div className={styles.inner}>
-          <Badge variant="outline" color="orange">
-            Ages 15+
-          </Badge>
           <h1 className={styles.pageTitle}>Adults classes</h1>
           <div className={styles.buttonGroup}>
             <Button color="orange" radius="xl">
