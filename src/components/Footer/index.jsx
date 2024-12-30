@@ -22,7 +22,7 @@ const FOOTER_LINKS = [
     links: [
       { path: "/kids-classes", label: "Kids" },
       { path: "/adults-classes", label: "Adults" },
-      { path: "/girls-and-women-classes", label: "Girls and women" },
+      { path: "/womens-classes", label: "Girls and women" },
     ],
   },
   {

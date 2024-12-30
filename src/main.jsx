@@ -10,6 +10,7 @@ import HomePage from "./pages/HomePage";
 import ErrorPage from "./pages/ErrorPage.jsx";
 import KidsClassesPage from "./pages/ClassesPage/KidsClassesPage";
 import AdultsClassesPage from "./pages/ClassesPage/AdultsClassesPage";
+import WomensClassesPage from "./pages/ClassesPage/WomensClassesPage";
 import TimetablePage from "./pages/TimetablePage.jsx";
 import ContactPage from "./pages/ContactPage";
 
@@ -30,6 +31,7 @@ const router = createBrowserRouter([
       { path: "/", element: <HomePage /> },
       { path: "/kids-classes", element: <KidsClassesPage /> },
       { path: "/adults-classes", element: <AdultsClassesPage /> },
+      { path: "/womens-classes", element: <WomensClassesPage /> },
       { path: "/timetable", element: <TimetablePage /> },
       { path: "/contact", element: <ContactPage /> },
     ],

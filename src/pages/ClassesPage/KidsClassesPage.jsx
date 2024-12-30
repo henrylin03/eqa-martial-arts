@@ -47,8 +47,8 @@ const KidsClassesPage = () => {
                 </Badge>
               </div>
               <p className={styles.classDescription}>
-                Join your child in our specialty classes, designed to ease young
-                children to the basics of martial arts in a playful and
+                Enrol your child in our specialty classes, designed to ease
+                young children into the basics of martial arts in a playful and
                 supportive environment.
               </p>
               <p className={styles.classDescription}>
@@ -135,7 +135,7 @@ const KidsClassesPage = () => {
             <Image
               radius="lg"
               src="/images/JuJitsu-Kids.jpg"
-              className={styles.gridImageCentred}
+              className={styles.gridImageCentredDown}
             />
             <div className={styles.textContainer}>
               <h2 className={styles.sectionHeading}>Kids Jiujitsu</h2>

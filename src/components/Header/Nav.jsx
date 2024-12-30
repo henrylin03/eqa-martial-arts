@@ -13,7 +13,7 @@ const PAGE_LINKS = [
     sublinks: [
       { path: "/kids-classes", label: "Kids" },
       { path: "/adults-classes", label: "Adults" },
-      { path: "/girls-and-women-classes", label: "Girls/Women" },
+      { path: "/womens-classes", label: "Girls/Women" },
     ],
   },
   { path: "/timetable", label: "Timetable" },

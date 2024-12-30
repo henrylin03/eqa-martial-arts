@@ -22,7 +22,7 @@ const CLASSES_DATA = [
     restrictions: "Female only",
     description:
       "Step into a space built for women, by women. Build confidence, learn self-defence and achieve your fitness goals in a safe space designed for you.",
-    path: "/girls-and-womens-classes",
+    path: "/womens-classes",
     imagePath: "/icons/woman.jpg",
   },
 ];
