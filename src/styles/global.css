@@ -4,15 +4,17 @@
   font-family: "Inter", sans-serif;
 }
 
-#root {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-
+:root {
   --grey: hsl(0, 0%, 35%);
   --orange: rgb(253, 126, 20);
   --light-orange: #ffe8cc;
   --lightest-orange: #fff4e1;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 main {
@@ -59,6 +61,14 @@ li {
 }
 
 /* Mantine components */
+.mantine-Menu-item {
+  color: white;
+  &:hover {
+    color: black !important;
+    background-color: var(--lightest-orange);
+  }
+}
+
 .mantine-TextInput-input,
 .mantine-Textarea-input {
   font-family: inherit;

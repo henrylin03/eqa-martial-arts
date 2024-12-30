@@ -59,7 +59,7 @@ const Nav = ({ isNarrowScreen }) => {
                   key={sublink.label}
                   to={sublink.path}
                   className={({ isActive }) =>
-                    isActive ? styles.activeLink : styles.link
+                    isActive ? styles.activeLink : styles.sublink
                   }
                 >
                   {sublink.label}
@@ -113,7 +113,7 @@ const Nav = ({ isNarrowScreen }) => {
 };
 
 Nav.propTypes = {
-  isNarrowScreen: PropTypes.bool.isRequired,
+  isNarrowScreen: PropTypes.bool,
 };
 
 export default Nav;
