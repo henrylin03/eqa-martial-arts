@@ -3,8 +3,22 @@ import { NavLink } from "react-router-dom";
 import { useDisclosure } from "@mantine/hooks";
 import { UnstyledButton, Collapse, Menu } from "@mantine/core";
 import { IconChevronDown } from "@tabler/icons-react";
-import PAGE_LINKS from "./PAGE_LINKS";
 import styles from "./Header.module.css";
+
+const PAGE_LINKS = [
+  { path: "/", label: "Home" },
+  {
+    path: null,
+    label: "Classes",
+    sublinks: [
+      { path: "/kids-classes", label: "Kids" },
+      { path: "/adults-classes", label: "Adults" },
+      { path: "/girls-and-women-classes", label: "Girls/Women" },
+    ],
+  },
+  { path: "/timetable", label: "Timetable" },
+  { path: "/contact", label: "Contact" },
+];
 
 const Nav = ({ isNarrowScreen }) => {
   const [linksOpened, { toggle: toggleLinks }] = useDisclosure(false);
@@ -72,16 +86,17 @@ const Nav = ({ isNarrowScreen }) => {
 
         <Menu.Dropdown className={styles.menuDropdown}>
           {linkObject.sublinks.map((sublink) => (
-            <Menu.Item key={sublink.label} className={styles.menuDropdownLink}>
-              <NavLink
-                to={sublink.path}
-                className={({ isActive }) =>
-                  isActive ? styles.activeLink : undefined
-                }
-              >
+            <NavLink
+              to={sublink.path}
+              key={sublink.label}
+              className={({ isActive }) =>
+                isActive ? styles.activeLink : undefined
+              }
+            >
+              <Menu.Item className={styles.menuDropdownLink}>
                 {sublink.label}
-              </NavLink>
-            </Menu.Item>
+              </Menu.Item>
+            </NavLink>
           ))}
         </Menu.Dropdown>
       </Menu>
