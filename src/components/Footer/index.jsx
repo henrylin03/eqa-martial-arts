@@ -4,6 +4,7 @@ import {
   IconMapPin,
   IconMail,
   IconBrandInstagram,
+  IconPhoneCall,
 } from "@tabler/icons-react";
 import brandingImage from "/images/branding/logo-white-bg.jpg";
 import styles from "./Footer.module.css";
@@ -38,6 +39,11 @@ Chatswood NSW 2067`,
         label: "Email",
         icon: <IconMail size="100%" />,
         value: "fang@equinoxacademy.com.au",
+      },
+      {
+        label: "Phone",
+        value: "0422 132 652",
+        icon: <IconPhoneCall size="100%" />,
       },
     ],
   },
@@ -129,7 +135,9 @@ const Footer = () => {
 
       <section className={styles.bottom}>
         <div className={styles.inner}>
-          <IconCopyright size={16} className={styles.copyrightIcon} />
+          <figure className={styles.copyrightIcon}>
+            <IconCopyright size="100%" />
+          </figure>
           <small className={styles.copyrightText}>
             2025 Equinox Academy. All rights reserved.
           </small>

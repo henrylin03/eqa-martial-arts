@@ -181,7 +181,7 @@ const KidsClassesPage = () => {
             <div className={styles.textContainer}>
               <h2 className={styles.sectionHeading}>Teens Jiujitsu</h2>
               <Badge variant="outline" color="grey">
-                Ages 10-14
+                Ages 10+
               </Badge>
               <p className={styles.classDescription}>
                 With a dynamic blend of self-defence and physical conditioning,
@@ -238,7 +238,7 @@ const KidsClassesPage = () => {
                   Ages 7-9
                 </Badge>
                 <Badge variant="outline" color="grey">
-                  Ages 10-14
+                  Ages 10+
                 </Badge>
               </div>
               <p className={styles.classDescription}>
@@ -286,7 +286,7 @@ const KidsClassesPage = () => {
                   Ages 7-9
                 </Badge>
                 <Badge variant="outline" color="grey">
-                  Ages 10-14
+                  Ages 10+
                 </Badge>
               </div>
               <p className={styles.classDescription}>

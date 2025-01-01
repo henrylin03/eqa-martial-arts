@@ -81,6 +81,8 @@
 
 .copyrightIcon {
   margin-bottom: 2px;
+  width: 16px;
+  height: 16px;
 }
 
 .copyrightText {
@@ -134,11 +136,12 @@
   }
 
   .column {
-    gap: 4px;
+    gap: 2.5vmin;
   }
 
   .heading {
     font-size: 0.8rem;
+    margin-bottom: -1vmin;
   }
 
   .socialsIcon {
@@ -155,5 +158,14 @@
 
   .bottom {
     padding: 4px 12px;
+  }
+
+  .copyrightIcon {
+    height: 12px;
+    width: 12px;
+  }
+
+  .copyrightText {
+    font-size: 0.58rem;
   }
 }
