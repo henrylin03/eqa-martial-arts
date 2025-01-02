@@ -20,7 +20,7 @@ const PAGE_LINKS = [
   { path: "/contact", label: "Contact" },
 ];
 
-const Nav = ({ isNarrowScreen }) => {
+const Nav = ({ isNarrowScreen = false, closeDrawer = () => {} }) => {
   const [linksOpened, { toggle: toggleLinks }] = useDisclosure(false);
 
   const navLinks = PAGE_LINKS.map((linkObject) => {
@@ -32,6 +32,7 @@ const Nav = ({ isNarrowScreen }) => {
           className={({ isActive }) =>
             isActive ? styles.activeLink : styles.link
           }
+          onClick={closeDrawer}
         >
           {linkObject.label}
         </NavLink>
@@ -61,6 +62,7 @@ const Nav = ({ isNarrowScreen }) => {
                   className={({ isActive }) =>
                     isActive ? styles.activeLink : styles.sublink
                   }
+                  onClick={closeDrawer}
                 >
                   {sublink.label}
                 </NavLink>
@@ -114,6 +116,7 @@ const Nav = ({ isNarrowScreen }) => {
 
 Nav.propTypes = {
   isNarrowScreen: PropTypes.bool,
+  closeDrawer: PropTypes.func,
 };
 
 export default Nav;

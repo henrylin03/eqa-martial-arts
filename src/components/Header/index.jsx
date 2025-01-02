@@ -48,6 +48,7 @@ const Header = () => {
               opened={drawerOpened}
               onClick={toggleDrawer}
               className={styles.burger}
+              aria-label="Toggle page navigation links"
             />
             <Drawer
               opened={drawerOpened}
@@ -56,7 +57,10 @@ const Header = () => {
               padding="lg"
             >
               <div className={styles.drawerInner}>
-                <Nav isNarrowScreen={isNarrowScreen} />
+                <Nav
+                  isNarrowScreen={isNarrowScreen}
+                  closeDrawer={closeDrawer}
+                />
                 <CallToActionButton className={styles.button} />
               </div>
             </Drawer>
