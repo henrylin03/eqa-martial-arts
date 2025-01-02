@@ -13,7 +13,7 @@ const Header = () => {
   const isNarrowScreen = useMediaQuery("(max-width: 899px)");
   const [scrollPosition, _] = useWindowScroll();
 
-  const isScrolledDown = scrollPosition.y >= 200;
+  const isScrolledDown = scrollPosition.y > 200;
 
   return (
     <header
