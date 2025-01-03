@@ -8,7 +8,7 @@ const WomensClassesPage = () => {
   return (
     <>
       <section className={styles.aboveTheFold}>
-        <div className={styles.inner}>
+        <div className={styles.aboveTheFoldInner}>
           <h1 className={styles.pageTitle}>Girls & Womens Classes</h1>
           <div className={styles.buttonGroup}>
             <Button color="orange" radius="xl">

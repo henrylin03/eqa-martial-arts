@@ -11,7 +11,7 @@ import ErrorPage from "./pages/ErrorPage.jsx";
 import KidsClassesPage from "./pages/ClassesPage/KidsClassesPage";
 import AdultsClassesPage from "./pages/ClassesPage/AdultsClassesPage";
 import WomensClassesPage from "./pages/ClassesPage/WomensClassesPage";
-import TimetablePage from "./pages/TimetablePage.jsx";
+import TimetablePage from "./pages/TimetablePage";
 import ContactPage from "./pages/ContactPage";
 
 /* css */

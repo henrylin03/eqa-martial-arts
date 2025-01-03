@@ -60,6 +60,29 @@ li {
   height: auto;
 }
 
+.aboveTheFold {
+  background-color: var(--light-orange);
+}
+
+.aboveTheFoldInner {
+  padding: 60px 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.pageTitle {
+  font-size: 2.5rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.aboveTheFoldButtonGroup {
+  display: flex;
+  gap: 12px;
+}
+
 /* Mantine components */
 .mantine-Menu-item {
   &:hover {
@@ -126,5 +149,9 @@ li {
   .mantine-Textarea-label {
     font-size: 0.8rem;
     line-height: 1.4rem;
+  }
+
+  .pageTitle {
+    font-size: 2rem;
   }
 }
