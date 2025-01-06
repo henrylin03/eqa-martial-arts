@@ -7,12 +7,12 @@ import { MantineProvider } from "@mantine/core";
 /* components */
 import App from "./App.jsx";
 import HomePage from "./pages/HomePage";
-import ErrorPage from "./pages/ErrorPage.jsx";
 import KidsClassesPage from "./pages/ClassesPage/KidsClassesPage";
 import AdultsClassesPage from "./pages/ClassesPage/AdultsClassesPage";
 import WomensClassesPage from "./pages/ClassesPage/WomensClassesPage";
 import TimetablePage from "./pages/TimetablePage";
 import ContactPage from "./pages/ContactPage";
+import ErrorPage from "./pages/ErrorPage";
 
 /* css */
 import "@mantine/core/styles.css";

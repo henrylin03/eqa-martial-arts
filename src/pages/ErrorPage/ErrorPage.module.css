@@ -1,0 +1,47 @@
+.errorPage {
+  background-color: hsl(38, 100%, 97%);
+}
+
+.inner {
+  composes: inner from global;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.paragraphText {
+  composes: paragraphText from global;
+}
+
+.image {
+  max-height: 400px;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+@media (max-width: 539px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .image {
+    order: -1;
+    max-height: 40dvh;
+    object-fit: contain;
+  }
+
+  .textContainer {
+    align-items: center;
+    text-align: center;
+  }
+}
