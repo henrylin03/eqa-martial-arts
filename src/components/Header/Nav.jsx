@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { useDisclosure } from "@mantine/hooks";
 import { UnstyledButton, Collapse, Menu } from "@mantine/core";
 import { IconChevronDown } from "@tabler/icons-react";
@@ -21,7 +21,16 @@ const PAGE_LINKS = [
 ];
 
 const Nav = ({ isNarrowScreen = false, closeDrawer = () => {} }) => {
+  const currentLocation = useLocation();
   const [linksOpened, { toggle: toggleLinks }] = useDisclosure(false);
+
+  const isClassPage = PAGE_LINKS.find(
+    (link) =>
+      link.label === "Classes" &&
+      link.sublinks.some(
+        (sublink) => currentLocation.pathname === sublink.path,
+      ),
+  );
 
   const navLinks = PAGE_LINKS.map((linkObject) => {
     if (!linkObject.hasOwnProperty("sublinks"))
@@ -42,7 +51,9 @@ const Nav = ({ isNarrowScreen = false, closeDrawer = () => {} }) => {
       return (
         <div key={linkObject.label} className={styles.sublinkNarrowWrapper}>
           <UnstyledButton onClick={toggleLinks} className={styles.sublinkLabel}>
-            <span>{linkObject.label}</span>
+            <span className={isClassPage ? styles.activeLink : undefined}>
+              {linkObject.label}
+            </span>
             <IconChevronDown
               size={16}
               className={
@@ -53,7 +64,7 @@ const Nav = ({ isNarrowScreen = false, closeDrawer = () => {} }) => {
             />
           </UnstyledButton>
 
-          <Collapse in={linksOpened}>
+          <Collapse in={isClassPage ? true : linksOpened}>
             <div className={styles.sublinksDrawer}>
               {linkObject.sublinks.map((sublink) => (
                 <NavLink
@@ -81,7 +92,9 @@ const Nav = ({ isNarrowScreen = false, closeDrawer = () => {} }) => {
       >
         <Menu.Target>
           <div className={styles.sublinkLabel}>
-            <span>{linkObject.label}</span>
+            <span className={isClassPage ? styles.activeLink : undefined}>
+              {linkObject.label}
+            </span>
             <IconChevronDown size={16} />
           </div>
         </Menu.Target>
