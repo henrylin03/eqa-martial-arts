@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import { Button, Image } from "@mantine/core";
+import { Image } from "@mantine/core";
+import AboveTheFoldSection from "../../components/AboveTheFoldSection";
 import CallToActionSection from "../../components/CallToActionSection";
 import TickIcon from "./TickIcon";
 import styles from "./Classes.module.css";
@@ -7,27 +7,8 @@ import styles from "./Classes.module.css";
 const AdultsClassesPage = () => {
   return (
     <>
-      <section className={styles.aboveTheFold}>
-        <div className={styles.aboveTheFoldInner}>
-          <h1 className={styles.pageTitle}>Adults classes</h1>
-          <div className={styles.buttonGroup}>
-            <Button color="orange" radius="xl">
-              Book a free trial
-            </Button>
-            {/* TODO: LINK TO THE ADULTS TIMETABLE SECTION OF TIMETABLE PAGE */}
-            <Link
-              to="/timetable"
-              aria-label="See timetable for adults' classes"
-            >
-              <Button variant="outline" color="orange" radius="xl" bg="white">
-                Class timetable
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
+      <AboveTheFoldSection pageName="Adults classes" />
 
-      {/* TODO: REFACTOR THE FOLLOWING INTO AN ARRAY OF OBJECTS THAT I CAN .MAP OVER */}
       <section className={styles.classTypes}>
         <article className={styles.classType}>
           <div className={styles.inner}>

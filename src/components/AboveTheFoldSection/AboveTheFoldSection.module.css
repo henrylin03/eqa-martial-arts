@@ -1,0 +1,22 @@
+.aboveTheFold {
+  background-color: var(--light-orange);
+}
+
+.aboveTheFoldInner {
+  padding: 60px 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.pageTitle {
+  font-size: 2.5rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 12px;
+}

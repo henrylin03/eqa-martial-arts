@@ -1,27 +1,13 @@
-import { Link } from "react-router-dom";
-import { Badge, Button, Image } from "@mantine/core";
+import { Badge, Image } from "@mantine/core";
 import CallToActionSection from "../../components/CallToActionSection";
+import AboveTheFoldSection from "../../components/AboveTheFoldSection";
 import TickIcon from "./TickIcon";
 import styles from "./Classes.module.css";
 
 const WomensClassesPage = () => {
   return (
     <>
-      <section className={styles.aboveTheFold}>
-        <div className={styles.aboveTheFoldInner}>
-          <h1 className={styles.pageTitle}>Girls & Womens Classes</h1>
-          <div className={styles.buttonGroup}>
-            <Button color="orange" radius="xl">
-              Book a free trial
-            </Button>
-            <Link to="/timetable" aria-label="See timetable for kids' classes">
-              <Button variant="outline" color="orange" radius="xl" bg="white">
-                Class timetable
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
+      <AboveTheFoldSection pageName="Girls & Womens classes" />
 
       <section className={styles.classTypes}>
         <article className={styles.classType}>

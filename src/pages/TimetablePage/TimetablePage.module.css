@@ -1,20 +1,3 @@
-.aboveTheFold {
-  composes: aboveTheFold from global;
-}
-
-.aboveTheFoldInner {
-  composes: aboveTheFoldInner from global;
-}
-
-.pageTitle {
-  composes: pageTitle from global;
-}
-
-.aboveTheFoldText {
-  composes: paragraphText from global;
-  text-align: center;
-}
-
 .link {
   text-decoration: underline;
   text-underline-offset: 6px;

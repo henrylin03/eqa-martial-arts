@@ -70,8 +70,9 @@ const Header = () => {
         )}
 
         <CallToActionButton
-          className={styles.button}
-          isNarrowScreen={isNarrowScreen}
+          size={isNarrowScreen ? "xs" : "md"}
+          buttonText={isNarrowScreen ? "Free trial" : "Book a free trial"}
+          customCssClass={styles.button}
         />
       </div>
     </header>

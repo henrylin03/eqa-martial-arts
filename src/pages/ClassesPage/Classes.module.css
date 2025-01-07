@@ -2,23 +2,6 @@
   composes: inner from global;
 }
 
-/* ABOVE THE FOLD SECTION */
-.aboveTheFold {
-  composes: aboveTheFold from global;
-}
-
-.aboveTheFoldInner {
-  composes: aboveTheFoldInner from global;
-}
-
-.pageTitle {
-  composes: pageTitle from global;
-}
-
-.buttonGroup {
-  composes: aboveTheFoldButtonGroup from global;
-}
-
 /* CLASSES SECTIONS */
 .classTypes {
   display: flex;

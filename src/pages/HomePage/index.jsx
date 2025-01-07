@@ -84,7 +84,7 @@ const HomePage = () => {
             </p>
           </div>
 
-          <CallToActionButton />
+          <CallToActionButton size="md" />
         </div>
 
         {isNarrowScreen ? (

@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { Button, Skeleton } from "@mantine/core";
+import { Skeleton } from "@mantine/core";
 import CallToActionSection from "../../components/CallToActionSection";
+import AboveTheFoldSection from "../../components/AboveTheFoldSection";
 import styles from "./TimetablePage.module.css";
 
 const TimetablePage = () => {
@@ -8,23 +9,7 @@ const TimetablePage = () => {
 
   return (
     <>
-      <section className={styles.aboveTheFold}>
-        <div className={styles.aboveTheFoldInner}>
-          <h1 className={styles.pageTitle}>Timetable</h1>
-          {/* <p className={styles.aboveTheFoldText}>
-            See our regular schedule for adults and kids classes, and our{" "}
-            <a href="#live-timetable" className={styles.link}>
-              live weekly schedule
-            </a>
-            !
-          </p> */}
-          <article className={styles.ctaButtons}>
-            <Button color="orange" radius="xl">
-              Book a free trial
-            </Button>
-          </article>
-        </div>
-      </section>
+      <AboveTheFoldSection pageName="Timetable" />
 
       <section id="live-timetable" className={styles.liveTimetableSection}>
         <Skeleton visible={isLoadingLiveTimetable} radius="lg">
