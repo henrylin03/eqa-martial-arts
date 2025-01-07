@@ -57,7 +57,7 @@ const HomePage = () => {
         to={classObject.path}
         aria-label={`Go to ${classObject.label} classes' page`}
       >
-        <Button variant="outline" color="orange" radius="xl" mt="lg">
+        <Button variant="outline" color="orange" radius="xl" mt="xs">
           Learn more
         </Button>
       </Link>
