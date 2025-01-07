@@ -64,7 +64,7 @@ const Nav = ({ isNarrowScreen = false, closeDrawer = () => {} }) => {
             />
           </UnstyledButton>
 
-          <Collapse in={isClassPage ? true : linksOpened}>
+          <Collapse in={linksOpened}>
             <div className={styles.sublinksDrawer}>
               {linkObject.sublinks.map((sublink) => (
                 <NavLink
