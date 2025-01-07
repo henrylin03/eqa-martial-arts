@@ -91,6 +91,7 @@ const Footer = () => {
           aria-label={`Visit our ${item.label}`}
           target="_blank"
           className={styles.socialsIcon}
+          key={item.label}
         >
           {item.icon}
         </a>
@@ -108,7 +109,7 @@ const Footer = () => {
       ));
 
     return (
-      <div className={styles.column}>
+      <div className={styles.column} key={column.heading}>
         <h2 className={styles.heading}>{column.heading}</h2>
         {columnContent}
       </div>
