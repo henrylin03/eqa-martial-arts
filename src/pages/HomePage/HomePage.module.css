@@ -76,7 +76,7 @@
   /* animation */
   animation-name: underline;
   animation-duration: 0.7s;
-  animation-delay: 0.2s;
+  animation-delay: 0.7s;
   animation-fill-mode: forwards;
 }
 
@@ -98,7 +98,7 @@
 
 .classesGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
   gap: 36px;
   width: 1000px;
   max-width: 100%;
@@ -221,8 +221,8 @@
     gap: 32px;
   }
 
-  .whyChooseUs {
-    padding-bottom: 144px;
+  .card {
+    padding: 24px 20px;
   }
 }
 
@@ -278,6 +278,10 @@
   .classes {
     padding: 48px 24px;
     gap: 12px;
+  }
+
+  .card {
+    padding: 16px 8px;
   }
 
   .reasonTitle {

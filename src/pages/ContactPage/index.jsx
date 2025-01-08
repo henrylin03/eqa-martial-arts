@@ -22,7 +22,11 @@ const ContactMethods = () => {
     let contactDetails = <></>;
 
     if (c.label === "phone")
-      contactDetails = <p className={styles.contactValue}>{c.value}</p>;
+      contactDetails = (
+        <p className={styles.contactValue} key={c.label}>
+          {c.value}
+        </p>
+      );
     else if (c.label === "email")
       contactDetails = (
         <a
@@ -30,6 +34,7 @@ const ContactMethods = () => {
           aria-label={`Send email to ${c.value}`}
           className={styles.link}
           target="_blank"
+          key={c.label}
         >
           {c.value}
         </a>
@@ -41,13 +46,14 @@ const ContactMethods = () => {
           target="_blank"
           aria-label="Open Google Maps to see gym location"
           className={styles.link}
+          key={c.label}
         >
           {c.value}
         </a>
       );
 
     return (
-      <div className={styles.contactMethod} aria-label={c.label}>
+      <div className={styles.contactMethod} aria-label={c.label} key={c.label}>
         <figure className={styles.contactIcon}>{c.icon}</figure>
         {contactDetails}
       </div>
