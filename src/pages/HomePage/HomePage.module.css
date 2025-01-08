@@ -224,10 +224,6 @@
   .card {
     padding: 24px 20px;
   }
-
-  .whyChooseUs {
-    padding-bottom: 144px;
-  }
 }
 
 @media (max-width: 759px) {
