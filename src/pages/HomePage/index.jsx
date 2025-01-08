@@ -41,12 +41,7 @@ const HomePage = () => {
   ];
 
   const classesCards = CLASSES_DATA.map((classObject) => (
-    <Link
-      to={classObject.path}
-      aria-label={`Go to ${classObject.label} classes' page`}
-      className={styles.card}
-      key={classObject.label}
-    >
+    <article className={styles.card} key={classObject.label}>
       <img src={classObject.imagePath} className={styles.cardImage} />
 
       <h2 className={styles.cardHeading}>{classObject.label}</h2>
@@ -61,7 +56,7 @@ const HomePage = () => {
           Learn more
         </Button>
       </Link>
-    </Link>
+    </article>
   ));
 
   return (
