@@ -12,14 +12,9 @@ const CallToActionButton = ({
       href="https://app.clubworx.com/websites/equinox-martial-arts-academy/waivers/trial-pass-waiver/signed_waivers/new"
       target="_blank"
       aria-label="Sign up for a free trial in a new tab"
+      className={customCssClass}
     >
-      <Button
-        color="orange"
-        radius="xl"
-        variant={variant}
-        size={size}
-        className={customCssClass}
-      >
+      <Button color="orange" radius="xl" variant={variant} size={size}>
         {buttonText}
       </Button>
     </a>
