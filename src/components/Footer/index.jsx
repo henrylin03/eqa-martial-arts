@@ -90,7 +90,7 @@ const Footer = () => {
           href={item.link}
           aria-label={`Visit our ${item.label}`}
           target="_blank"
-          className={styles.socialsIcon}
+          className={styles.socialsIconContainer}
           key={item.label}
         >
           {item.icon}

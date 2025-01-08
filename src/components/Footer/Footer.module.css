@@ -47,9 +47,9 @@
   color: gray;
 }
 
-.socialsIcon {
-  width: 42px;
-  height: 42px;
+.socialsIconContainer {
+  height: 52px;
+  width: 52px;
   padding: 4px;
   border-radius: 50%;
   background-color: transparent;
@@ -58,7 +58,7 @@
   transition: background-color 0.2s linear;
 }
 
-.socialsIcon:hover {
+.socialsIconContainer:hover {
   background-color: var(--orange);
   color: white;
 }
@@ -144,10 +144,6 @@
     margin-bottom: -1vmin;
   }
 
-  .socialsIcon {
-    width: 24px;
-  }
-
   .contactItem {
     gap: 8px;
   }
@@ -167,5 +163,12 @@
 
   .copyrightText {
     font-size: 0.58rem;
+  }
+}
+
+@media (max-width: 499px) {
+  .socialsIconContainer {
+    height: 40px;
+    width: 40px;
   }
 }
