@@ -38,7 +38,7 @@ Chatswood NSW 2067`,
       {
         label: "Email",
         icon: <IconMail size="100%" />,
-        value: "fang@equinoxacademy.com.au",
+        value: "info@equinoxacademy.com.au",
       },
       {
         label: "Phone",

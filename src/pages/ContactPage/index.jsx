@@ -10,7 +10,7 @@ const LINK_TO_GOOGLE_MAPS_LOCATION =
 const ContactMethods = () => {
   const CONTACT_METHODS_DATA = [
     { label: "phone", value: "0422 132 652", icon: <IconPhoneCall /> },
-    { label: "email", value: "fang@equinoxacademy.com.au", icon: <IconMail /> },
+    { label: "email", value: "info@equinoxacademy.com.au", icon: <IconMail /> },
     {
       label: "Visit us at our address",
       value: "18/390 Eastern Valley Way, Chatswood NSW 2067",
