@@ -77,7 +77,8 @@
   padding: 4px 8px;
 }
 
-.link:hover {
+.link:hover,
+.sublink:hover {
   text-decoration: underline 3px orange;
   text-underline-offset: 8px;
 }

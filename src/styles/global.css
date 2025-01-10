@@ -67,6 +67,10 @@ li {
   }
 }
 
+.mantine-Drawer-close {
+  border-radius: 50%;
+}
+
 .mantine-TextInput-input,
 .mantine-Textarea-input {
   font-family: inherit;
