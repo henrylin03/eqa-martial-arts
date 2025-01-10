@@ -21,7 +21,7 @@ import "./styles/normalise.css";
 import "./styles/global.css";
 
 /* other */
-import { theme } from "./theme";
+import { theme } from "./styles/theme";
 
 const router = createBrowserRouter([
   {

@@ -15,6 +15,11 @@
   gap: 5vmin;
 }
 
+.brandingLink {
+  height: fit-content;
+  width: fit-content;
+}
+
 .brandingImage {
   composes: brandingImage from global;
 }

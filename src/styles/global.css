@@ -9,6 +9,7 @@
   --orange: rgb(253, 126, 20);
   --light-orange: #ffe8cc;
   --lightest-orange: #fff4e1;
+  --focus-outline: 3px solid orange;
 }
 
 #root {
@@ -33,6 +34,14 @@ p {
 
 li {
   list-style-type: none;
+}
+
+a:focus-visible {
+  outline: var(--focus-outline);
+  border-radius: 0.5rem;
+  outline-offset: 4px;
+  width: fit-content;
+  z-index: 999;
 }
 
 .link:hover {
@@ -62,9 +71,15 @@ li {
 
 /* Mantine components */
 .mantine-Menu-item {
+  background: transparent;
+
   &:hover {
     background-color: var(--lightest-orange);
   }
+}
+
+.mantine-Drawer-header {
+  z-index: 2;
 }
 
 .mantine-Drawer-close {

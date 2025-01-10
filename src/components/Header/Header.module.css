@@ -25,14 +25,19 @@
   gap: 8px;
 }
 
+.branding {
+  height: fit-content;
+  width: fit-content;
+}
+
 .brandingImage {
   composes: brandingImage from global;
 }
 
 .brandingImageShrunk {
-  margin-top: 8px;
-  margin-left: 12px;
-  width: 80px;
+  padding: 8px 8px 0 8px;
+  width: 100px;
+  height: fit-content;
 }
 
 .nav {
@@ -64,6 +69,7 @@
   display: flex;
   align-items: center;
   gap: 4px;
+  border-radius: 0.5rem;
 }
 
 .sublinksDrawer {

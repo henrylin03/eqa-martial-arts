@@ -13,6 +13,7 @@ const CallToActionButton = ({
       target="_blank"
       aria-label="Sign up for a free trial in a new tab"
       className={customCssClass}
+      tabIndex={-1}
     >
       <Button color="orange" radius="xl" variant={variant} size={size}>
         {buttonText}

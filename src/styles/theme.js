@@ -1,5 +1,6 @@
 import { createTheme } from "@mantine/core";
+import classes from "./focus.module.css";
 
 export const theme = createTheme({
-  /** Put your mantine theme override here */
+  focusClassName: classes.focus,
 });

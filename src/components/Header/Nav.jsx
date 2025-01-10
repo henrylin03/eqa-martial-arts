@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { NavLink, useLocation } from "react-router-dom";
-import { useDisclosure } from "@mantine/hooks";
+import { useDisclosure, useFocusTrap } from "@mantine/hooks";
 import { UnstyledButton, Collapse, Menu } from "@mantine/core";
 import { IconChevronDown } from "@tabler/icons-react";
 import styles from "./Header.module.css";
@@ -23,6 +23,7 @@ const PAGE_LINKS = [
 const Nav = ({ isNarrowScreen = false, closeDrawer = () => {} }) => {
   const currentLocation = useLocation();
   const [linksOpened, { toggle: toggleLinks }] = useDisclosure(false);
+  const focusTrapRef = useFocusTrap();
 
   const isClassPage = PAGE_LINKS.find(
     (link) =>
@@ -86,17 +87,21 @@ const Nav = ({ isNarrowScreen = false, closeDrawer = () => {} }) => {
     return (
       <Menu
         key={linkObject.label}
-        trigger="hover"
+        trigger="click-hover"
         transitionProps={{ exitDuration: 0 }}
-        withinPortal
+        ref={focusTrapRef}
+        loop={false}
+        withinPortal={false}
+        trapFocus={false}
+        menuItemTabIndex={0}
       >
         <Menu.Target>
-          <div className={styles.sublinkLabel}>
+          <UnstyledButton className={styles.sublinkLabel} p={4}>
             <span className={isClassPage ? styles.activeLink : undefined}>
               {linkObject.label}
             </span>
             <IconChevronDown size={16} />
-          </div>
+          </UnstyledButton>
         </Menu.Target>
 
         <Menu.Dropdown className={styles.menuDropdown}>
@@ -107,6 +112,7 @@ const Nav = ({ isNarrowScreen = false, closeDrawer = () => {} }) => {
               className={({ isActive }) =>
                 isActive ? styles.activeLink : undefined
               }
+              tabIndex={-1}
             >
               <Menu.Item className={styles.menuDropdownLink}>
                 {sublink.label}

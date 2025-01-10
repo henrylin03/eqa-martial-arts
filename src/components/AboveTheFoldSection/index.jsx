@@ -14,7 +14,11 @@ const AboveTheFoldSection = ({ pageName }) => {
           <CallToActionButton />
 
           {!pageName.toLowerCase().includes("timetable") && (
-            <Link to="/timetable" aria-label="See timetable for classes">
+            <Link
+              to="/timetable"
+              aria-label="See timetable for classes"
+              tabIndex={-1}
+            >
               <Button variant="outline" color="orange" radius="xl" bg="white">
                 Class timetable
               </Button>
