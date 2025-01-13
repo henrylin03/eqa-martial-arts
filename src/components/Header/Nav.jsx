@@ -94,6 +94,7 @@ const Nav = ({ isNarrowScreen = false, closeDrawer = () => {} }) => {
         withinPortal={false}
         trapFocus={false}
         menuItemTabIndex={0}
+        radius="lg"
       >
         <Menu.Target>
           <UnstyledButton className={styles.sublinkLabel} p={4}>

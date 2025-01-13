@@ -72,6 +72,7 @@ a:focus-visible {
 /* Mantine components */
 .mantine-Menu-item {
   background: transparent;
+  padding: 16px 12px !important;
 
   &:hover {
     background-color: var(--lightest-orange);

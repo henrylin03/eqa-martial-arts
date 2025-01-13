@@ -1,11 +1,12 @@
 import { useRef } from "react";
 import Autoplay from "embla-carousel-autoplay";
 import { Carousel } from "@mantine/carousel";
+import ImageWithLoadingSkeleton from "../../components/ImageWithLoadingSkeleton";
 import styles from "./HomePage.module.css";
 
 const ImageCarousel = () => {
-  const autoplay = useRef(Autoplay({ delay: 5000 }));
   const IMAGES_PATHS_PREFIX = "/images/banner";
+  const autoplay = useRef(Autoplay({ delay: 5000 }));
 
   const imagePaths = [];
   for (let imageSuffix = 1; imageSuffix <= 3; imageSuffix++)
@@ -22,7 +23,10 @@ const ImageCarousel = () => {
       >
         {imagePaths.map((path) => (
           <Carousel.Slide key={path}>
-            <img src={path} className={styles.carouselImage} />
+            <ImageWithLoadingSkeleton
+              src={path}
+              className={styles.carouselImage}
+            />
           </Carousel.Slide>
         ))}
       </Carousel>

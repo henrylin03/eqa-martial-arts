@@ -1,4 +1,4 @@
-import { Image } from "@mantine/core";
+import ImageWithLoadingSkeleton from "../../components/ImageWithLoadingSkeleton";
 import AboveTheFoldSection from "../../components/AboveTheFoldSection";
 import CallToActionSection from "../../components/CallToActionSection";
 import TickIcon from "./TickIcon";
@@ -12,8 +12,7 @@ const AdultsClassesPage = () => {
       <section className={styles.classTypes}>
         <article className={styles.classType}>
           <div className={styles.inner}>
-            <Image
-              radius="lg"
+            <ImageWithLoadingSkeleton
               src="/images/james-omoplata.jpg"
               className={styles.gridImageRight}
             />
@@ -97,8 +96,7 @@ const AdultsClassesPage = () => {
                 </li>
               </ul>
             </div>
-            <Image
-              radius="lg"
+            <ImageWithLoadingSkeleton
               src="/images/mt-darien.jpg"
               className={styles.gridImageFarRight}
             />
@@ -107,8 +105,7 @@ const AdultsClassesPage = () => {
 
         <article className={styles.classType}>
           <div className={styles.inner}>
-            <Image
-              radius="lg"
+            <ImageWithLoadingSkeleton
               src="/images/adults-mma.jpg"
               className={styles.gridImageFarRight}
             />

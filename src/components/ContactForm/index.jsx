@@ -81,6 +81,7 @@ const ContactForm = () => {
           key={form.key("firstName")}
           disabled={form.submitting}
           {...form.getInputProps("firstName")}
+          radius="md"
         />
 
         <TextInput
@@ -89,6 +90,7 @@ const ContactForm = () => {
           key={form.key("lastName")}
           {...form.getInputProps("lastName")}
           disabled={form.submitting}
+          radius="md"
         />
       </div>
 
@@ -100,6 +102,7 @@ const ContactForm = () => {
           key={form.key("email")}
           {...form.getInputProps("email")}
           disabled={form.submitting}
+          radius="md"
         />
 
         <TextInput
@@ -108,6 +111,7 @@ const ContactForm = () => {
           key={form.key("phone")}
           {...form.getInputProps("phone")}
           disabled={form.submitting}
+          radius="md"
         />
       </div>
 
@@ -119,12 +123,12 @@ const ContactForm = () => {
         autosize
         minRows={4}
         disabled={form.submitting}
+        radius="md"
       />
 
       <Button
         type="submit"
         color="orange"
-        radius="xl"
         size={isNarrowScreen ? "sm" : "md"}
         loading={form.submitting}
       >

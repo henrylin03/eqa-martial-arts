@@ -1,5 +1,6 @@
 import { IconPhoneCall, IconMail, IconMapPin } from "@tabler/icons-react";
 import ContactForm from "../../components/ContactForm";
+import ImageWithLoadingSkeleton from "../../components/ImageWithLoadingSkeleton";
 import locationMapWide from "/map/location.png";
 import locationMapNarrow from "/map/location-narrow.png";
 import styles from "./ContactPage.module.css";
@@ -9,7 +10,7 @@ const LINK_TO_GOOGLE_MAPS_LOCATION =
 
 const ContactMethods = () => {
   const CONTACT_METHODS_DATA = [
-    { label: "phone", value: "0422 132 652", icon: <IconPhoneCall /> },
+    { label: "phone", value: "0422 132 651", icon: <IconPhoneCall /> },
     { label: "email", value: "info@equinoxacademy.com.au", icon: <IconMail /> },
     {
       label: "Visit us at our address",
@@ -85,7 +86,7 @@ const ContactPage = () => {
           <picture>
             <source media="(max-width: 753px)" srcSet={locationMapWide} />
             <source media="(min-width: 754px)" srcSet={locationMapNarrow} />
-            <img
+            <ImageWithLoadingSkeleton
               src={locationMapNarrow}
               className={styles.mapScreenshot}
               alt="Location of Equinox Academy on maps"

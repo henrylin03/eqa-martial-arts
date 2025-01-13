@@ -42,7 +42,7 @@ Chatswood NSW 2067`,
       },
       {
         label: "Phone",
-        value: "0422 132 652",
+        value: "0422 132 651",
         icon: <IconPhoneCall size="100%" />,
       },
     ],

@@ -1,4 +1,5 @@
-import { Badge, Image } from "@mantine/core";
+import { Badge } from "@mantine/core";
+import ImageWithLoadingSkeleton from "../../components/ImageWithLoadingSkeleton";
 import CallToActionSection from "../../components/CallToActionSection";
 import AboveTheFoldSection from "../../components/AboveTheFoldSection";
 import TickIcon from "./TickIcon";
@@ -12,9 +13,8 @@ const WomensClassesPage = () => {
       <section className={styles.classTypes}>
         <article className={styles.classType}>
           <div className={styles.inner}>
-            <Image
-              radius="lg"
-              src="/images/girls-in-gi.jpg"
+            <ImageWithLoadingSkeleton
+              src="/images/girls-in-gi.JPEG"
               className={styles.gridImageCentred}
             />
             <div className={styles.textContainer}>
@@ -96,8 +96,7 @@ const WomensClassesPage = () => {
                 </li>
               </ul>
             </div>
-            <Image
-              radius="lg"
+            <ImageWithLoadingSkeleton
               src="/images/kobi-spider.jpg"
               className={styles.gridImage}
             />

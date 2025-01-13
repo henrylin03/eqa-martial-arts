@@ -15,7 +15,7 @@ const CallToActionButton = ({
       className={customCssClass}
       tabIndex={-1}
     >
-      <Button color="orange" radius="xl" variant={variant} size={size}>
+      <Button color="orange" variant={variant} size={size}>
         {buttonText}
       </Button>
     </a>

@@ -1,5 +1,6 @@
-import { Badge, Image } from "@mantine/core";
+import { Badge } from "@mantine/core";
 import TickIcon from "./TickIcon";
+import ImageWithLoadingSkeleton from "../../components/ImageWithLoadingSkeleton";
 import AboveTheFoldSection from "../../components/AboveTheFoldSection";
 import CallToActionSection from "../../components/CallToActionSection";
 import styles from "./Classes.module.css";
@@ -9,12 +10,10 @@ const KidsClassesPage = () => {
     <>
       <AboveTheFoldSection pageName="Kids classes" />
 
-      {/* TODO: REFACTOR THE FOLLOWING INTO AN ARRAY OF OBJECTS THAT I CAN .MAP OVER */}
       <section className={styles.classTypes}>
         <article className={styles.classType}>
           <div className={styles.inner}>
-            <Image
-              radius="lg"
+            <ImageWithLoadingSkeleton
               src="/images/riley-black-gi.jpg"
               className={styles.gridImage}
             />
@@ -104,8 +103,7 @@ const KidsClassesPage = () => {
                 </li>
               </ul>
             </div>
-            <Image
-              radius="lg"
+            <ImageWithLoadingSkeleton
               src="/images/kids-intro-roll.jpg"
               className={styles.gridImage}
             />
@@ -114,8 +112,7 @@ const KidsClassesPage = () => {
 
         <article className={styles.classType}>
           <div className={styles.inner}>
-            <Image
-              radius="lg"
+            <ImageWithLoadingSkeleton
               src="/images/JuJitsu-Kids.jpg"
               className={styles.gridImageCentredDown}
             />
@@ -199,8 +196,7 @@ const KidsClassesPage = () => {
                 </li>
               </ul>
             </div>
-            <Image
-              radius="lg"
+            <ImageWithLoadingSkeleton
               src="/images/James-Teens-Instructor.jpg"
               className={styles.gridImage}
             />
@@ -209,8 +205,7 @@ const KidsClassesPage = () => {
 
         <article className={styles.classType}>
           <div className={styles.inner}>
-            <Image
-              radius="lg"
+            <ImageWithLoadingSkeleton
               src="/images/Kids-MMA.jpg"
               className={styles.gridImageCentred}
             />
@@ -311,8 +306,7 @@ const KidsClassesPage = () => {
               </ul>
             </div>
             {/* NEED TO REPLACE THIS IMAGE WITH A NON-STOCK PHOTO WHEN AVAILABLE */}
-            <Image
-              radius="lg"
+            <ImageWithLoadingSkeleton
               src="/images/pexels-gustavo-fring-6720438.jpg"
               className={styles.gridImage}
             />

@@ -6,43 +6,72 @@ import {
   IconHomeHeart,
   IconSchool,
 } from "@tabler/icons-react";
+import ImageWithLoadingSkeleton from "../../components/ImageWithLoadingSkeleton";
 import CallToActionButton from "../../components/CallToActionButton";
 import ImageCarousel from "./ImageCarousel";
-import CLASSES_DATA from "./CLASSES_DATA";
 import bannerImage from "/images/banner/banner.jpg";
 import reasonsImage from "/images/spider-guard.jpg";
 import styles from "./HomePage.module.css";
 import CallToActionSection from "../../components/CallToActionSection";
 
+const REASONS_DATA = [
+  {
+    label: "Safe and supportive environment",
+    description:
+      "We ensure an inclusive environment that helps make everyone feel at home - whether it is your first class ever, or you are already a seasoned martial artist.",
+    icon: <IconHomeHeart size="100%" />,
+  },
+
+  {
+    label: "Expert and experienced instructors",
+    description:
+      "Learn from our passionate and experienced instructors, dedicated to helping you achieve your individual goals on your martial arts journey.",
+    icon: <IconSchool size="100%" />,
+  },
+
+  {
+    label: "Tailored classes for all levels",
+    description:
+      "We offer classes designed for every skill level, age, and goal. No matter where you're starting, you'll find a curriculum that feels tailored to you.",
+    icon: <IconChartArrows size="100%" />,
+  },
+];
+
+const CLASSES_DATA = [
+  {
+    label: "Kids",
+    description:
+      "Help your child (ages 3+) build confidence, discipline and teamwork in a safe and fun environment with expert instructors.",
+    path: "/kids-classes",
+    imagePath: "/icons/kids.webp",
+  },
+
+  {
+    label: "Adults",
+    description:
+      "Elevate your fitness, focus and self-defence skills through our dynamic training programs - perfect for beginners and experienced martial artists alike.",
+    path: "/adults-classes",
+    imagePath: "/icons/seated-male-in-gi.webp",
+  },
+
+  {
+    label: "Girls and Women",
+    description:
+      "Step into a space built for women, by women. Build confidence, learn self-defence and achieve your fitness goals in a safe space designed for you.",
+    path: "/womens-classes",
+    imagePath: "/icons/woman.jpg",
+  },
+];
+
 const HomePage = () => {
   const isNarrowScreen = useMediaQuery("(max-width: 869px)");
 
-  const reasonsToChoose = [
-    {
-      label: "Safe and supportive environment",
-      description:
-        "We ensure an inclusive environment that helps make everyone feel at home - whether it is your first class ever, or you are already a seasoned martial artist.",
-      icon: <IconHomeHeart size="100%" />,
-    },
-
-    {
-      label: "Expert and experienced instructors",
-      description:
-        "Learn from our passionate and experienced instructors, dedicated to helping you achieve your individual goals on your martial arts journey.",
-      icon: <IconSchool size="100%" />,
-    },
-
-    {
-      label: "Tailored classes for all levels",
-      description:
-        "We offer classes designed for every skill level, age, and goal. No matter where you're starting, you'll find a curriculum that feels tailored to you.",
-      icon: <IconChartArrows size="100%" />,
-    },
-  ];
-
   const classesCards = CLASSES_DATA.map((classObject) => (
     <article className={styles.card} key={classObject.label}>
-      <img src={classObject.imagePath} className={styles.cardImage} />
+      <ImageWithLoadingSkeleton
+        src={classObject.imagePath}
+        className={styles.cardImage}
+      />
 
       <h2 className={styles.cardHeading}>{classObject.label}</h2>
 
@@ -86,7 +115,10 @@ const HomePage = () => {
         {isNarrowScreen ? (
           <ImageCarousel />
         ) : (
-          <img src={bannerImage} className={styles.heroImage} />
+          <ImageWithLoadingSkeleton
+            src={bannerImage}
+            className={styles.heroImage}
+          />
         )}
       </section>
 
@@ -107,13 +139,13 @@ const HomePage = () => {
           </Badge>
           <h1 className={styles.sectionHeading}>Why train at Equinox?</h1>
           <div className={styles.reasonsGrid}>
-            <img
+            <ImageWithLoadingSkeleton
               src={reasonsImage}
               alt="Brazilian Jiujitsu in the traditional gi"
               className={styles.reasonsImage}
             />
             <div className={styles.right}>
-              {reasonsToChoose.map((reasonObject) => (
+              {REASONS_DATA.map((reasonObject) => (
                 <div className={styles.reason} key={reasonObject.label}>
                   <figure className={styles.reasonIcon}>
                     {reasonObject.icon}
