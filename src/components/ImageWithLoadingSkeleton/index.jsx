@@ -6,7 +6,12 @@ const ImageWithLoadingSkeleton = ({ src, className = undefined, alt = "" }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   return (
-    <Skeleton visible={isLoading} radius="lg" height="100%">
+    <Skeleton
+      visible={isLoading}
+      radius="lg"
+      height="100%"
+      className={className}
+    >
       <img
         src={src}
         onLoad={() => setIsLoading(false)}
