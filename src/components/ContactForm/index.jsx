@@ -29,9 +29,9 @@ const ContactForm = () => {
   const [isSent, setIsSent] = useState(false);
 
   const handleSubmit = async () => {
-    const SERVICE_ID = "test";
-    const ADMIN_NOTIFICATION_EMAIL_TEMPLATE_ID = "admin_template";
-    const PUBLIC_KEY = "XMj_5s32EB3qP29Z_";
+    const SERVICE_ID = "service_oxw4hg7";
+    const ADMIN_NOTIFICATION_EMAIL_TEMPLATE_ID = "template_i34ihph";
+    const PUBLIC_KEY = "pVUyNGte95sYX3Sfy";
 
     const { firstName, lastName, email, phone, message } = form.getValues();
 
