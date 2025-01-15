@@ -6,9 +6,10 @@
 
 :root {
   --grey: hsl(0, 0%, 35%);
-  --orange: rgb(253, 126, 20);
+  --orange: #fd7e17;
   --light-orange: #ffe8cc;
   --lightest-orange: #fff4e1;
+  --dark-orange: #e36802;
   --focus-outline: 3px solid orange;
 }
 

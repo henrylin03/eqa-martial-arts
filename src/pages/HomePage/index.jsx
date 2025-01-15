@@ -82,7 +82,7 @@ const HomePage = () => {
         aria-label={`Go to ${classObject.label} classes' page`}
         tabIndex={-1}
       >
-        <Button variant="outline" color="orange" radius="xl" mt="xs">
+        <Button variant="outline" color="#e36802" radius="xl" mt="xs">
           Learn more
         </Button>
       </Link>
