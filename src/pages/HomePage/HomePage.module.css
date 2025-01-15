@@ -17,21 +17,25 @@
 
 /* HERO SECTION */
 .hero {
-  background-color: var(--lightest-orange);
   display: flex;
   flex-direction: column;
 }
 
 .textContainer {
+  background-color: var(--lightest-orange);
+  padding: 60px 48px;
+  width: 100%;
+}
+
+.heroText {
   text-align: center;
   margin: 0 auto;
-  padding: 48px;
   width: 960px;
   max-width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
 }
 
 .heroHeading {
@@ -251,6 +255,10 @@
   .sectionHeading {
     margin-bottom: 16px;
   }
+
+  .textContainer {
+    padding: 32px;
+  }
 }
 
 @media (min-width: 607px) {
@@ -266,8 +274,7 @@
   }
 
   .textContainer {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding: 32px 16px;
   }
 
   .heroHeading {

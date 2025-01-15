@@ -92,23 +92,25 @@ const HomePage = () => {
     <>
       <section className={styles.hero}>
         <div className={styles.textContainer}>
-          <h1 className={styles.heroHeading}>
-            A martial arts academy for{" "}
-            <span className={styles.underlinedText}>everyone</span>
-          </h1>
-          <div className={styles.subtextContainer}>
-            <p>
-              No matter your age, gender or previous experience in martial arts,
-              Equinox is here for you!
-            </p>
-            <p>
-              Supported by a vibrant community of students and parents, we
-              foster a safe and supportive environment where everyone can grow,
-              learn and excel in martial arts.
-            </p>
-          </div>
+          <div className={styles.heroText}>
+            <h1 className={styles.heroHeading}>
+              A martial arts academy for{" "}
+              <span className={styles.underlinedText}>everyone</span>
+            </h1>
+            <div className={styles.subtextContainer}>
+              <p>
+                No matter your age, gender or previous experience in martial
+                arts, Equinox is here for you!
+              </p>
+              <p>
+                Supported by a vibrant community of students and parents, we
+                foster a safe and supportive environment where everyone can
+                grow, learn and excel in martial arts.
+              </p>
+            </div>
 
-          <CallToActionButton size="md" />
+            <CallToActionButton size="md" />
+          </div>
         </div>
 
         {isNarrowScreen ? (
