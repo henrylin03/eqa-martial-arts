@@ -19,7 +19,7 @@ const AboveTheFoldSection = ({ pageName }) => {
               aria-label="See timetable for classes"
               tabIndex={-1}
             >
-              <Button variant="outline" color="orange" radius="xl" bg="white">
+              <Button variant="outline" color="#e36802" radius="xl">
                 Class timetable
               </Button>
             </Link>
