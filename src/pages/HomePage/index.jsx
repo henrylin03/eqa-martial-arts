@@ -10,7 +10,6 @@ import ImageWithLoadingSkeleton from "../../components/ImageWithLoadingSkeleton"
 import CallToActionButton from "../../components/CallToActionButton";
 import ImageCarousel from "./ImageCarousel";
 import bannerImage from "/images/banner/banner.jpg";
-import reasonsImage from "/images/spider-guard.jpg";
 import styles from "./HomePage.module.css";
 import CallToActionSection from "../../components/CallToActionSection";
 
@@ -144,7 +143,7 @@ const HomePage = () => {
           </div>
           <div className={styles.reasonsGrid}>
             <ImageWithLoadingSkeleton
-              src={reasonsImage}
+              src="/images/rolling.JPEG"
               alt="Brazilian Jiujitsu in the traditional gi"
               className={styles.reasonsImage}
             />
