@@ -16,6 +16,10 @@ const FOOTER_LINKS = [
       { path: "/", label: "Home" },
       { path: "/timetable", label: "Timetable" },
       { path: "/contact", label: "Contact" },
+      {
+        path: "https://app.clubworx.com/websites/equinox-martial-arts-academy/waivers/trial-pass-waiver/signed_waivers/new",
+        label: "Book a free trial",
+      },
     ],
   },
   {
@@ -97,16 +101,28 @@ const Footer = () => {
         </a>
       ));
     else
-      columnContent = column.links.map((link) => (
-        <Link
-          to={link.path}
-          aria-label={`Go to ${link.label} page`}
-          key={link.label}
-          className={styles.link}
-        >
-          {link.label}
-        </Link>
-      ));
+      columnContent = column.links.map((link) =>
+        link.label === "Book a free trial" ? (
+          <a
+            href={link.path}
+            target="_blank"
+            aria-label="Book a free trial with Equinox"
+            className={styles.link}
+            key={link.label}
+          >
+            Book a free trial
+          </a>
+        ) : (
+          <Link
+            to={link.path}
+            aria-label={`Go to ${link.label} page`}
+            key={link.label}
+            className={styles.link}
+          >
+            {link.label}
+          </Link>
+        ),
+      );
 
     return (
       <div className={styles.column} key={column.heading}>
