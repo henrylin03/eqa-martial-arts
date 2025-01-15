@@ -1,5 +1,6 @@
 import { Button } from "@mantine/core";
 import PropTypes from "prop-types";
+import styles from "./CallToActionButton.module.css";
 
 const CallToActionButton = ({
   variant = "filled",
@@ -15,7 +16,12 @@ const CallToActionButton = ({
       className={customCssClass}
       tabIndex={-1}
     >
-      <Button color="orange" variant={variant} size={size}>
+      <Button
+        color="orange"
+        variant={variant}
+        size={size}
+        className={variant === "white" ? styles.button : undefined}
+      >
         {buttonText}
       </Button>
     </a>
