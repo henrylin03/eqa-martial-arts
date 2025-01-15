@@ -84,7 +84,8 @@
 }
 
 .link:hover,
-.sublink:hover {
+.sublink:hover,
+.sublinkLabel:hover {
   text-decoration: underline 3px orange;
   text-underline-offset: 8px;
 }
