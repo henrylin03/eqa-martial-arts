@@ -123,21 +123,25 @@ const HomePage = () => {
       </section>
 
       <section className={styles.classes}>
-        <Badge size="md" variant="outline" color="orange">
-          Our classes
-        </Badge>
-        <h1 className={styles.sectionHeading}>
-          Tailored martial arts classes for every age and experience level
-        </h1>
+        <div className={styles.top}>
+          <Badge size="md" variant="white" color="grey">
+            Our classes
+          </Badge>
+          <h1 className={styles.sectionHeading}>
+            Tailored martial arts classes for every age and experience level
+          </h1>
+        </div>
         <div className={styles.classesGrid}>{classesCards}</div>
       </section>
 
       <section className={styles.whyChooseUs}>
         <div className={styles.whyChooseUsInner}>
-          <Badge variant="outline" color="orange">
-            Why choose us
-          </Badge>
-          <h1 className={styles.sectionHeading}>Why train at Equinox?</h1>
+          <div className={styles.top}>
+            <Badge size="md" variant="transparent" color="grey">
+              Why choose us
+            </Badge>
+            <h1 className={styles.sectionHeading}>Why train at Equinox?</h1>
+          </div>
           <div className={styles.reasonsGrid}>
             <ImageWithLoadingSkeleton
               src={reasonsImage}

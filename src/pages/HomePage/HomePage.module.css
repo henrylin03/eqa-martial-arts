@@ -96,6 +96,12 @@
   composes: section;
 }
 
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .classesGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
