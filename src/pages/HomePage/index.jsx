@@ -10,7 +10,6 @@ import ImageWithLoadingSkeleton from "../../components/ImageWithLoadingSkeleton"
 import CallToActionButton from "../../components/CallToActionButton";
 import ImageCarousel from "./ImageCarousel";
 import bannerImage from "/images/banner/banner.jpg";
-import reasonsImage from "/images/spider-guard.jpg";
 import styles from "./HomePage.module.css";
 import CallToActionSection from "../../components/CallToActionSection";
 
@@ -82,7 +81,7 @@ const HomePage = () => {
         aria-label={`Go to ${classObject.label} classes' page`}
         tabIndex={-1}
       >
-        <Button variant="outline" color="orange" radius="xl" mt="xs">
+        <Button variant="outline" color="#e36802" radius="xl" mt="xs">
           Learn more
         </Button>
       </Link>
@@ -93,23 +92,25 @@ const HomePage = () => {
     <>
       <section className={styles.hero}>
         <div className={styles.textContainer}>
-          <h1 className={styles.heroHeading}>
-            A martial arts academy for{" "}
-            <span className={styles.underlinedText}>everyone</span>
-          </h1>
-          <div className={styles.subtextContainer}>
-            <p>
-              No matter your age, gender or previous experience in martial arts,
-              Equinox is here for you!
-            </p>
-            <p>
-              Supported by a vibrant community of students and parents, we
-              foster a safe and supportive environment where everyone can grow,
-              learn and excel in martial arts.
-            </p>
-          </div>
+          <div className={styles.heroText}>
+            <h1 className={styles.heroHeading}>
+              A martial arts academy for{" "}
+              <span className={styles.underlinedText}>everyone</span>
+            </h1>
+            <div className={styles.subtextContainer}>
+              <p>
+                No matter your age, gender or previous experience in martial
+                arts, Equinox is here for you!
+              </p>
+              <p>
+                Supported by a vibrant community of students and parents, we
+                foster a safe and supportive environment where everyone can
+                grow, learn and excel in martial arts.
+              </p>
+            </div>
 
-          <CallToActionButton size="md" />
+            <CallToActionButton size="md" />
+          </div>
         </div>
 
         {isNarrowScreen ? (
@@ -123,24 +124,28 @@ const HomePage = () => {
       </section>
 
       <section className={styles.classes}>
-        <Badge size="md" variant="outline" color="orange">
-          Our classes
-        </Badge>
-        <h1 className={styles.sectionHeading}>
-          Tailored martial arts classes for every age and experience level
-        </h1>
+        <div className={styles.top}>
+          <Badge size="md" variant="white" color="grey">
+            Our classes
+          </Badge>
+          <h1 className={styles.sectionHeading}>
+            Tailored martial arts classes for every age and experience level
+          </h1>
+        </div>
         <div className={styles.classesGrid}>{classesCards}</div>
       </section>
 
       <section className={styles.whyChooseUs}>
         <div className={styles.whyChooseUsInner}>
-          <Badge variant="outline" color="orange">
-            Why choose us
-          </Badge>
-          <h1 className={styles.sectionHeading}>Why train at Equinox?</h1>
+          <div className={styles.top}>
+            <Badge size="md" variant="transparent" color="grey">
+              Why choose us
+            </Badge>
+            <h1 className={styles.sectionHeading}>Why train at Equinox?</h1>
+          </div>
           <div className={styles.reasonsGrid}>
             <ImageWithLoadingSkeleton
-              src={reasonsImage}
+              src="/images/rolling.JPEG"
               alt="Brazilian Jiujitsu in the traditional gi"
               className={styles.reasonsImage}
             />

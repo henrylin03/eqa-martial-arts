@@ -12,7 +12,7 @@
 
 .headerShrunk {
   composes: header;
-  opacity: 0.9;
+  background-color: hsla(0, 0%, 100%, 90%);
   padding: 16px;
   transition: opacity var(--transition-time);
 }
@@ -84,7 +84,8 @@
 }
 
 .link:hover,
-.sublink:hover {
+.sublink:hover,
+.sublinkLabel:hover {
   text-decoration: underline 3px orange;
   text-underline-offset: 8px;
 }

@@ -14,7 +14,7 @@ const CallToActionSection = ({ isWhiteBg = false }) => {
         <p className={styles.ctaText}>Ready to try a class?</p>
         <CallToActionButton
           variant="white"
-          size={isNarrowScreen ? "sm" : "lg"}
+          size={isNarrowScreen ? "md" : "xl"}
         />
       </div>
     </section>

@@ -305,10 +305,9 @@ const KidsClassesPage = () => {
                 </li>
               </ul>
             </div>
-            {/* NEED TO REPLACE THIS IMAGE WITH A NON-STOCK PHOTO WHEN AVAILABLE */}
             <ImageWithLoadingSkeleton
-              src="/images/pexels-gustavo-fring-6720438.jpg"
-              className={styles.gridImage}
+              src="/images/james-kids-muay-thai.jpg"
+              className={styles.gridImageCentred}
             />
           </div>
         </article>
