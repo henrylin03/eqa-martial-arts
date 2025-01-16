@@ -4,11 +4,13 @@ import { Button } from "@mantine/core";
 import CallToActionButton from "../CallToActionButton";
 import styles from "./AboveTheFoldSection.module.css";
 
-const AboveTheFoldSection = ({ pageName }) => {
+const AboveTheFoldSection = ({ pageName, subtext = "" }) => {
   return (
     <section className={styles.aboveTheFold}>
       <div className={styles.aboveTheFoldInner}>
         <h1 className={styles.pageTitle}>{pageName}</h1>
+
+        {subtext && <div className={styles.subtext}>{subtext}</div>}
 
         <div className={styles.buttonGroup}>
           <CallToActionButton />
@@ -32,6 +34,7 @@ const AboveTheFoldSection = ({ pageName }) => {
 
 AboveTheFoldSection.propTypes = {
   pageName: PropTypes.string.isRequired,
+  subtext: PropTypes.element,
 };
 
 export default AboveTheFoldSection;

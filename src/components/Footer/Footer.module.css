@@ -27,6 +27,7 @@
 .column {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   gap: 8px;
 }
 
@@ -132,7 +133,7 @@
 
   .top {
     grid-template-columns: repeat(auto-fit, minmax(172px, 1fr));
-    padding: 48px 24px;
+    padding: 36px 24px;
     gap: 24px;
   }
 
@@ -175,5 +176,13 @@
   .socialsIconContainer {
     height: 40px;
     width: 40px;
+  }
+}
+
+@media (max-width: 419px) {
+  .top {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
   }
 }

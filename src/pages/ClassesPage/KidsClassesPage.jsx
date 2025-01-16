@@ -6,9 +6,23 @@ import CallToActionSection from "../../components/CallToActionSection";
 import styles from "./Classes.module.css";
 
 const KidsClassesPage = () => {
+  const aboveTheFoldText = (
+    <p>
+      Equinox is a proud provider of the New South Wales Government's{" "}
+      <a
+        href="https://www.service.nsw.gov.au/active-and-creative-kids-voucher"
+        target="_blank"
+        aria-label="Go to Service New South Wales' 'Active and Creative Kids' page"
+      >
+        Active and Creative Kids
+      </a>{" "}
+      program.
+    </p>
+  );
+
   return (
     <>
-      <AboveTheFoldSection pageName="Kids classes" />
+      <AboveTheFoldSection pageName="Kids classes" subtext={aboveTheFoldText} />
 
       <section className={styles.classTypes}>
         <article className={styles.classType}>
