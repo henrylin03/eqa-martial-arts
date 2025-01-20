@@ -27,19 +27,11 @@ const Header = () => {
           aria-label="Return to home page"
           className={styles.branding}
         >
-          {isScrolledDown && !isNarrowScreen ? (
-            <img
-              src={brandingImageShrunk}
-              className={styles.brandingImageShrunk}
-              alt="Logo"
-            />
-          ) : (
-            <img
-              src={brandingImage}
-              className={styles.brandingImage}
-              alt="Logo"
-            />
-          )}
+          <img
+            src={brandingImage}
+            className={styles.brandingImage}
+            alt="Logo"
+          />
         </Link>
 
         {isNarrowScreen ? (

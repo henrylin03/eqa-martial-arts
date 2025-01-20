@@ -13,7 +13,6 @@
 .headerShrunk {
   composes: header;
   background-color: hsla(0, 0%, 100%, 90%);
-  padding: 16px;
   transition: opacity var(--transition-time);
 }
 
