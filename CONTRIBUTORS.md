@@ -2,12 +2,7 @@
 
 I really want to give my heartfelt thanks to everyone who contributed to this project for Equinox Academy!
 
-## Core contributors
-
-- **Henry Lin** - Lead Designer/Developer ([Website](https://henrylin.io) | [GitHub](https://github.com/henrylin03/))
-- **Anna Wang** - UX/Copy/SEO
-
-## Special thanks
-
-- **Nicole Foo** - UI/UX review
-- **Lisa Lin** - UI review
+- **Henry Lin** - Lead Designer/Developer ([LinkedIn](https://www.linkedin.com/in/henrylin03/) | [Website](https://henrylin.io))
+- **Nicole Foo** - UI/UX Design Reviewer ([LinkedIn](https://www.linkedin.com/in/nicole-foo-595904123/))
+- **Anna Wang** - UX/Copy Reviewer ([LinkedIn](https://www.linkedin.com/in/anna-wang-16794b137/))
+- **Lisa Lin** - UI Design Reviewer ([LinkedIn](https://www.linkedin.com/in/lisawlin/))
