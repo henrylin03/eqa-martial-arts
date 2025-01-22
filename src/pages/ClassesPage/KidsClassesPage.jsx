@@ -1,28 +1,44 @@
 import { Badge } from "@mantine/core";
-import TickIcon from "./TickIcon";
 import ImageWithLoadingSkeleton from "../../components/ImageWithLoadingSkeleton";
 import AboveTheFoldSection from "../../components/AboveTheFoldSection";
 import CallToActionSection from "../../components/CallToActionSection";
+import TickIcon from "./TickIcon";
+import SEOHelmet from "../../components/SEOHelmet";
+import seoConfig from "../../config/seo.config";
 import styles from "./Classes.module.css";
 
 const KidsClassesPage = () => {
+  const { title, description, keywords, canonicalUrl, ogImage } =
+    seoConfig.kidsClasses;
+
   const aboveTheFoldText = (
     <p>
-      Equinox is a proud provider of the New South Wales Government's{" "}
+      Equinox is a proud provider of the NSW Government's{" "}
       <a
         href="https://www.service.nsw.gov.au/active-and-creative-kids-voucher"
         target="_blank"
         aria-label="Go to Service New South Wales' 'Active and Creative Kids' page"
       >
-        Active and Creative Kids
-      </a>{" "}
-      program.
+        Active and Creative Kids program
+      </a>
+      .
     </p>
   );
 
   return (
     <>
-      <AboveTheFoldSection pageName="Kids classes" subtext={aboveTheFoldText} />
+      <SEOHelmet
+        title={title}
+        description={description}
+        keywords={keywords}
+        canonicalUrl={canonicalUrl}
+        ogImage={ogImage}
+      />
+
+      <AboveTheFoldSection
+        pageName="Kids and teens martial arts classes"
+        subtext={aboveTheFoldText}
+      />
 
       <section className={styles.classTypes}>
         <article className={styles.classType}>
@@ -55,12 +71,6 @@ const KidsClassesPage = () => {
                 <li className={styles.benefit}>
                   <TickIcon />
                   <span className={styles.benefitText}>
-                    Bond with your child in shared moments of fun and connection
-                  </span>
-                </li>
-                <li className={styles.benefit}>
-                  <TickIcon />
-                  <span className={styles.benefitText}>
                     Help your child develop physical coordination, balance and
                     confidence
                   </span>
@@ -72,6 +82,12 @@ const KidsClassesPage = () => {
                     arts
                   </span>
                 </li>
+                <li className={styles.benefit}>
+                  <TickIcon />
+                  <span className={styles.benefitText}>
+                    Connect and have fun with your child
+                  </span>
+                </li>
               </ul>
             </div>
           </div>
@@ -81,15 +97,15 @@ const KidsClassesPage = () => {
           <div className={styles.inner}>
             <div className={styles.textContainer}>
               <h2 className={styles.sectionHeading}>
-                Introduction to Martial Arts
+                Introduction to martial arts
               </h2>
               <Badge variant="outline" color="grey">
                 Ages 5-6
               </Badge>
               <p className={styles.classDescription}>
-                Introduce young children to the basics of martial arts through
-                our fun and engaging classes that combine a wide variety of
-                techniques from both striking and grappling arts.
+                Our classes combine a variety of techniques from striking and
+                grappling arts to introduce young children to the basics of
+                martial arts.
               </p>
               <p className={styles.classDescription}>
                 Our 45-minute classes are filled with engaging drills and
@@ -111,7 +127,7 @@ const KidsClassesPage = () => {
                 <li className={styles.benefit}>
                   <TickIcon size="90%" />
                   <span className={styles.benefitText}>
-                    Develop valuable life skills like discipline, focus and
+                    Develop valuable life skills, like discipline, focus and
                     resilience
                   </span>
                 </li>
@@ -131,19 +147,20 @@ const KidsClassesPage = () => {
               className={styles.gridImageCentredDown}
             />
             <div className={styles.textContainer}>
-              <h2 className={styles.sectionHeading}>Kids Jiujitsu</h2>
+              <h2 className={styles.sectionHeading}>
+                Kids Brazilian Jiu Jitsu (BJJ)
+              </h2>
               <Badge variant="outline" color="grey">
                 Ages 7-9
               </Badge>
               <p className={styles.classDescription}>
-                Dive into an exciting world of Brazilian Jiujitsu (BJJ)
-                techniques that teach your child how to escape and control
-                positions and apply submissions safely - all while having a
-                blast with friends!
+                Dive into the exciting world of BJJ with techniques that teach
+                your child how to escape and control positions, and apply
+                submissions safely.
               </p>
               <p className={styles.classDescription}>
-                But, it's not just about the moves - we make our 45-minute
-                classes fun by running games and challenges that:
+                We make our 45-minute classes fun by running games and
+                challenges that:
               </p>
               <ul className={styles.benefits}>
                 <li className={styles.benefit}>
@@ -156,15 +173,15 @@ const KidsClassesPage = () => {
                 <li className={styles.benefit}>
                   <TickIcon size="90%" />
                   <span className={styles.benefitText}>
-                    Develop students' physical fitness, including their strength
-                    and coordination
+                    Develop students' physical fitness, including strength and
+                    coordination
                   </span>
                 </li>
                 <li className={styles.benefit}>
                   <TickIcon size="90%" />
                   <span className={styles.benefitText}>
-                    Foster important life skills like teamwork, resilience and
-                    respect for others
+                    Foster life skills like teamwork, resilience and respect for
+                    others
                   </span>
                 </li>
               </ul>
@@ -175,17 +192,16 @@ const KidsClassesPage = () => {
         <article className={styles.classTypeColoured}>
           <div className={styles.inner}>
             <div className={styles.textContainer}>
-              <h2 className={styles.sectionHeading}>Teens Jiujitsu</h2>
+              <h2 className={styles.sectionHeading}>
+                Teens Brazilian Jiu Jitsu (BJJ)
+              </h2>
               <Badge variant="outline" color="grey">
                 Ages 10+
               </Badge>
               <p className={styles.classDescription}>
                 With a dynamic blend of self-defence and physical conditioning,
-                our 1-hour classes teach teenagers important techniques of
-                Brazilian Jiujitsu (BJJ), also known as the "gentle art".
-              </p>
-              <p className={styles.classDescription}>
-                Our highly-experienced instructors focus on helping teens:
+                our 1-hour classes teach teenagers important techniques of BJJ,
+                also known as the "gentle art".
               </p>
               <ul className={styles.benefits}>
                 <li className={styles.benefit}>
@@ -236,28 +252,27 @@ const KidsClassesPage = () => {
                 </Badge>
               </div>
               <p className={styles.classDescription}>
-                Our Kids and Teens MMA programs offer a structured approach to
+                Our kids and teens MMA programs offer a structured approach to
                 combining techniques from both striking and grappling martial
                 arts.
               </p>
               <p className={styles.classDescription}>
-                Catered to all skill levels, our classes (45 minutes for Kids, 1
-                hour for Teens) combine skill-based drills, partner work, and
-                light sparring in a supervised and safe environment, helping our
-                young warriors to:
+                Catered to all skill levels, our classes (45 minutes for Kids; 1
+                hour for Teens) combine skill-based drills, partner work and
+                light sparring in a supervised and safe environment.
               </p>
               <ul className={styles.benefits}>
                 <li className={styles.benefit}>
                   <TickIcon size="90%" />
                   <span className={styles.benefitText}>
-                    Master self-defence techniques that combine Muay Thai,
-                    Brazilian Jiujitsu (BJJ), wrestling and more
+                    Master self-defence techniques from Muay Thai, BJJ and
+                    wrestling
                   </span>
                 </li>
                 <li className={styles.benefit}>
                   <TickIcon size="90%" />
                   <span className={styles.benefitText}>
-                    Develop strength, agility, and coordination
+                    Develop strength, agility and coordination
                   </span>
                 </li>
                 <li className={styles.benefit}>
@@ -284,16 +299,14 @@ const KidsClassesPage = () => {
                 </Badge>
               </div>
               <p className={styles.classDescription}>
-                Introduce both Kids and Teens to Muay Thai, a traditional
-                striking and clinching martial art from Thailand, all in a safe
-                and supportive environment.
+                Introduce kids and teens to Muay Thai, a traditional striking
+                and clinching martial art from Thailand.
               </p>
               <p className={styles.classDescription}>
                 Through age-appropriate drills and exercises in our classes (45
-                minutes for Kids, 1 hour for Teens), students learn a variety of
-                standing striking techniques in the "Art of Eight Limbs",
-                incorporating punching, kicking, elbowing and kneeing, as well
-                as clinching and sweeping.
+                minutes for kids; 1 hour for teens), students learn a variety of
+                standing striking techniques that incorporate punching, kicking,
+                elbowing, kneeing, clinching and sweeping.
               </p>
               <ul className={styles.benefits}>
                 <li className={styles.benefit}>
@@ -322,6 +335,7 @@ const KidsClassesPage = () => {
             <ImageWithLoadingSkeleton
               src="/images/james-kids-muay-thai.jpg"
               className={styles.gridImageCentred}
+              alt="Head coach, James, holding punching pads for a young child to jab."
             />
           </div>
         </article>

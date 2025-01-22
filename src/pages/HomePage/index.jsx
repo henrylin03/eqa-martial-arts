@@ -1,69 +1,78 @@
 import { Link } from "react-router-dom";
 import { useMediaQuery } from "@mantine/hooks";
-import { Badge, Button } from "@mantine/core";
+import { Button } from "@mantine/core";
 import {
   IconChartArrows,
   IconHomeHeart,
   IconSchool,
 } from "@tabler/icons-react";
+
 import ImageWithLoadingSkeleton from "../../components/ImageWithLoadingSkeleton";
 import CallToActionButton from "../../components/CallToActionButton";
+import CallToActionSection from "../../components/CallToActionSection";
 import ImageCarousel from "./ImageCarousel";
+
+import SEOHelmet from "../../components/SEOHelmet";
+import seoConfig from "../../config/seo.config";
+
 import bannerImage from "/images/banner/banner.jpg";
 import styles from "./HomePage.module.css";
-import CallToActionSection from "../../components/CallToActionSection";
+
+const CLASSES_DATA = [
+  {
+    label: "Kids and Teens",
+    description:
+      "Help your child (ages 3+) build confidence and discipline in a safe and fun environment.",
+    path: "/kids-classes",
+    imagePath: "/icons/kids.webp",
+    buttonLabel: "kids",
+  },
+
+  {
+    label: "Adults",
+    description:
+      "Elevate your fitness, focus and self-defence skills – perfect for beginners and experienced martial artists alike.",
+    path: "/adults-classes",
+    imagePath: "/icons/seated-male-in-gi.webp",
+    buttonLabel: "adults",
+  },
+
+  {
+    label: "Girls and Women",
+    description:
+      "Build confidence and learn self-defence in a safe space designed for women, by women.",
+    path: "/womens-classes",
+    imagePath: "/icons/woman.jpg",
+    buttonLabel: "women's",
+  },
+];
 
 const REASONS_DATA = [
   {
     label: "Safe and supportive environment",
     description:
-      "We ensure an inclusive environment that helps make everyone feel at home - whether it is your first class ever, or you are already a seasoned martial artist.",
+      "Whether it’s your first class or you’re a seasoned martial artist, our inclusive environment will help you feel at home.",
     icon: <IconHomeHeart size="100%" />,
   },
 
   {
     label: "Expert and experienced instructors",
     description:
-      "Learn from our passionate and experienced instructors, dedicated to helping you achieve your individual goals on your martial arts journey.",
+      "Learn from our passionate and experienced coaches, dedicated to helping you achieve your goals on your martial arts journey.",
     icon: <IconSchool size="100%" />,
   },
 
   {
     label: "Tailored classes for all levels",
     description:
-      "We offer classes designed for every skill level, age, and goal. No matter where you're starting, you'll find a curriculum that feels tailored to you.",
+      "We offer classes designed for every skill level, age, and goal. No matter where you're starting, you'll find a curriculum that suits you.",
     icon: <IconChartArrows size="100%" />,
-  },
-];
-
-const CLASSES_DATA = [
-  {
-    label: "Kids",
-    description:
-      "Help your child (ages 3+) build confidence, discipline and teamwork in a safe and fun environment with expert instructors.",
-    path: "/kids-classes",
-    imagePath: "/icons/kids.webp",
-  },
-
-  {
-    label: "Adults",
-    description:
-      "Elevate your fitness, focus and self-defence skills through our dynamic training programs - perfect for beginners and experienced martial artists alike.",
-    path: "/adults-classes",
-    imagePath: "/icons/seated-male-in-gi.webp",
-  },
-
-  {
-    label: "Girls and Women",
-    description:
-      "Step into a space built for women, by women. Build confidence, learn self-defence and achieve your fitness goals in a safe space designed for you.",
-    path: "/womens-classes",
-    imagePath: "/icons/woman.jpg",
   },
 ];
 
 const HomePage = () => {
   const isNarrowScreen = useMediaQuery("(max-width: 869px)");
+  const { title, description, keywords, canonicalUrl } = seoConfig.home;
 
   const classesCards = CLASSES_DATA.map((classObject) => (
     <article className={styles.card} key={classObject.label}>
@@ -82,7 +91,7 @@ const HomePage = () => {
         tabIndex={-1}
       >
         <Button variant="outline" color="#e36802" radius="xl" mt="xs">
-          Learn more
+          Explore {classObject.buttonLabel} classes
         </Button>
       </Link>
     </article>
@@ -90,6 +99,13 @@ const HomePage = () => {
 
   return (
     <>
+      <SEOHelmet
+        title={title}
+        description={description}
+        keywords={keywords}
+        canonicalUrl={canonicalUrl}
+      />
+
       <section className={styles.hero}>
         <div className={styles.textContainer}>
           <div className={styles.heroText}>
@@ -100,7 +116,7 @@ const HomePage = () => {
             <div className={styles.subtextContainer}>
               <p>
                 No matter your age, gender or previous experience in martial
-                arts, Equinox is here for you!
+                arts, Equinox is here for you.
               </p>
               <p>
                 Supported by a vibrant community of students and parents, we
@@ -124,25 +140,15 @@ const HomePage = () => {
       </section>
 
       <section className={styles.classes}>
-        <div className={styles.top}>
-          <Badge size="md" variant="white" color="grey">
-            Our classes
-          </Badge>
-          <h1 className={styles.sectionHeading}>
-            Tailored martial arts classes for every age and experience level
-          </h1>
-        </div>
+        <h1 className={styles.sectionHeading}>
+          Martial arts classes in Chatswood
+        </h1>
         <div className={styles.classesGrid}>{classesCards}</div>
       </section>
 
       <section className={styles.whyChooseUs}>
         <div className={styles.whyChooseUsInner}>
-          <div className={styles.top}>
-            <Badge size="md" variant="transparent" color="grey">
-              Why choose us
-            </Badge>
-            <h1 className={styles.sectionHeading}>Why train at Equinox?</h1>
-          </div>
+          <h1 className={styles.sectionHeading}>Why train at Equinox?</h1>
           <div className={styles.reasonsGrid}>
             <ImageWithLoadingSkeleton
               src="/images/rolling.JPEG"

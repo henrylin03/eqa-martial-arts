@@ -3,12 +3,25 @@ import ImageWithLoadingSkeleton from "../../components/ImageWithLoadingSkeleton"
 import CallToActionSection from "../../components/CallToActionSection";
 import AboveTheFoldSection from "../../components/AboveTheFoldSection";
 import TickIcon from "./TickIcon";
+import SEOHelmet from "../../components/SEOHelmet";
+import seoConfig from "../../config/seo.config";
 import styles from "./Classes.module.css";
 
 const WomensClassesPage = () => {
+  const { title, description, keywords, canonicalUrl, ogImage } =
+    seoConfig.womensClasses;
+
   return (
     <>
-      <AboveTheFoldSection pageName="Girls & Womens classes" />
+      <SEOHelmet
+        title={title}
+        description={description}
+        keywords={keywords}
+        canonicalUrl={canonicalUrl}
+        ogImage={ogImage}
+      />
+
+      <AboveTheFoldSection pageName="Girls and Womens classes" />
 
       <section className={styles.classTypes}>
         <article className={styles.classType}>
@@ -18,7 +31,7 @@ const WomensClassesPage = () => {
               className={styles.gridImageCentred}
             />
             <div className={styles.textContainer}>
-              <h2 className={styles.sectionHeading}>Girls Only Classes</h2>
+              <h2 className={styles.sectionHeading}>Girls only classes</h2>
               <div className={styles.badges}>
                 <Badge variant="outline" color="grey">
                   Ages 10+
@@ -27,16 +40,15 @@ const WomensClassesPage = () => {
               <p className={styles.classDescription}>
                 Enrol your daughter in Equinox's girls only classes, designed to
                 ease girls into self-defence in a safe and supportive
-                atmosphere.
-              </p>
-              <p className={styles.classDescription}>
-                Led by experienced female instructors, these classes focus on:
+                environment. Classes are led by female instructors and are
+                designed to allow each student to progress at her own pace – no
+                prior experience is required.
               </p>
               <ul className={styles.benefits}>
                 <li className={styles.benefit}>
                   <TickIcon />
                   <span className={styles.benefitText}>
-                    Teaching essential self-defence techniques
+                    Learn essential self-defence techniques
                   </span>
                 </li>
                 <li className={styles.benefit}>
@@ -48,15 +60,10 @@ const WomensClassesPage = () => {
                 <li className={styles.benefit}>
                   <TickIcon />
                   <span className={styles.benefitText}>
-                    Empowering girls to feel strong, capable, and prepared for
-                    any situation
+                    Feel empowered, capable, and prepared for any situation
                   </span>
                 </li>
               </ul>
-              <p className={styles.classDescription}>
-                Classes are designed to allow each student to progress at her
-                own pace - no prior experience is required!
-              </p>
             </div>
           </div>
         </article>
@@ -64,21 +71,17 @@ const WomensClassesPage = () => {
         <article className={styles.classTypeColoured}>
           <div className={styles.inner}>
             <div className={styles.textContainer}>
-              <h2 className={styles.sectionHeading}>Women's Only Classes</h2>
+              <h2 className={styles.sectionHeading}>Women's only classes</h2>
               <p className={styles.classDescription}>
-                Experience our women's only classes and join our supportive
-                community that celebrates each woman's journey in martial arts!
-              </p>
-              <p className={styles.classDescription}>
-                Led by highly experienced female instructors, our classes offer
-                a unique opportunity to:
+                Experience our womens only classes, led by experienced female
+                instructors, and join our supportive community that celebrates
+                each woman's journey in martial arts.
               </p>
               <ul className={styles.benefits}>
                 <li className={styles.benefit}>
                   <TickIcon size="90%" />
                   <span className={styles.benefitText}>
-                    Learn and master practical self-defence techniques in a safe
-                    space
+                    Learn practical self-defence techniques in a safe space
                   </span>
                 </li>
                 <li className={styles.benefit}>
@@ -91,7 +94,7 @@ const WomensClassesPage = () => {
                 <li className={styles.benefit}>
                   <TickIcon size="90%" />
                   <span className={styles.benefitText}>
-                    Build confidence and feel personal empowerment
+                    Build confidence and feel empowered
                   </span>
                 </li>
               </ul>

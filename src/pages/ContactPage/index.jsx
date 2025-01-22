@@ -1,6 +1,8 @@
 import { IconPhoneCall, IconMail, IconMapPin } from "@tabler/icons-react";
 import ContactForm from "../../components/ContactForm";
 import ImageWithLoadingSkeleton from "../../components/ImageWithLoadingSkeleton";
+import SEOHelmet from "../../components/SEOHelmet";
+import seoConfig from "../../config/seo.config";
 import locationMapWide from "/map/location.png";
 import locationMapNarrow from "/map/location-narrow.png";
 import styles from "./ContactPage.module.css";
@@ -65,36 +67,47 @@ const ContactMethods = () => {
 };
 
 const ContactPage = () => {
+  const { title, description, keywords, canonicalUrl } = seoConfig.contact;
+
   return (
-    <section className={styles.contactPage}>
-      <article className={styles.textAndFormContainer}>
-        <div className={styles.top}>
-          <h1 className={styles.pageTitle}>Get in touch</h1>
-          <p className={styles.paragraphText}>We'd love to hear from you!</p>
-        </div>
-        <ContactMethods />
+    <>
+      <SEOHelmet
+        title={title}
+        description={description}
+        keywords={keywords}
+        canonicalUrl={canonicalUrl}
+      />
 
-        <ContactForm />
-      </article>
+      <section className={styles.contactPage}>
+        <article className={styles.textAndFormContainer}>
+          <div className={styles.top}>
+            <h1 className={styles.pageTitle}>Get in touch</h1>
+            <p className={styles.paragraphText}>We'd love to hear from you!</p>
+          </div>
+          <ContactMethods />
 
-      <article className={styles.map}>
-        <a
-          href={LINK_TO_GOOGLE_MAPS_LOCATION}
-          target="_blank"
-          aria-label="See location of Equinox Academy in Google Maps"
-        >
-          <picture>
-            <source media="(max-width: 753px)" srcSet={locationMapWide} />
-            <source media="(min-width: 754px)" srcSet={locationMapNarrow} />
-            <ImageWithLoadingSkeleton
-              src={locationMapNarrow}
-              className={styles.mapScreenshot}
-              alt="Location of Equinox Academy on maps"
-            />
-          </picture>
-        </a>
-      </article>
-    </section>
+          <ContactForm />
+        </article>
+
+        <article className={styles.map}>
+          <a
+            href={LINK_TO_GOOGLE_MAPS_LOCATION}
+            target="_blank"
+            aria-label="See location of Equinox Academy in Google Maps"
+          >
+            <picture>
+              <source media="(max-width: 753px)" srcSet={locationMapWide} />
+              <source media="(min-width: 754px)" srcSet={locationMapNarrow} />
+              <ImageWithLoadingSkeleton
+                src={locationMapNarrow}
+                className={styles.mapScreenshot}
+                alt="Location of Equinox Academy on maps"
+              />
+            </picture>
+          </a>
+        </article>
+      </section>
+    </>
   );
 };
 
