@@ -79,8 +79,8 @@
 
   /* animation */
   animation-name: underline;
-  animation-duration: 0.7s;
-  animation-delay: 0.7s;
+  animation-duration: 0.6s;
+  animation-delay: 1s;
   animation-fill-mode: forwards;
 }
 
@@ -129,18 +129,14 @@
   gap: 8px;
 }
 
-.card:hover {
-  transform: scale(1.05);
-}
-
 .cardHeading {
-  margin-top: 4px;
   font-size: 1.1rem;
 }
 
 .cardImage {
   max-width: 100px;
-  height: auto;
+  max-height: 100px;
+  margin-bottom: 8px;
 }
 
 .classDescription {
